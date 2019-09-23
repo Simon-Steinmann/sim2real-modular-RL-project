@@ -1,0 +1,5 @@
+---
+bool success
+geometry_msgs/PoseArray joint_coordinates
+#Index: 0=root, 1-6=joints, 7-9=fingers, 10-12=fingertips
+

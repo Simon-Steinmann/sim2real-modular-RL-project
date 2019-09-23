@@ -1,0 +1,8 @@
+prefix=/home/simon/sim2real/simulations/kinova/devel
+
+Name: kinova_demo
+Description: Description of kinova_demo
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/simon/sim2real/simulations/kinova/devel/lib 
+Requires: kinova_driver kinova_msgs roscpp rospy std_msgs geometry_msgs

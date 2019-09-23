@@ -1,0 +1,12 @@
+<launch>
+    <!-- Load the URDF into the ROS Parameter Server -->
+	
+	
+	 <rosparam command="load" file="$(find j2n6s300_ml)/config/j2n6s300_params.yaml" />
+    
+	
+	<param name="robot_description" command="cat $(find ml_using_tf)/urdf/j2n6s300.xarco" />
+	<node name="robot_state_publisher_tf" pkg="ml_using_tf" type="state_publisher" />
+	<!-- Launch the training system -->
+    <node pkg="ml_using_tf" name="j2n6s300_tf_gym" type="start_training_tf.py" output="screen"/> 
+</launch>

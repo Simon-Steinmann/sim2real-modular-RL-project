@@ -1,0 +1,5 @@
+<launch>
+    <rosparam command="load" file="$(find j2n6s300_ml)/config/j2n6s300_params.yaml" />
+    <!-- Launch the training system -->
+    <node pkg="j2n6s300_ml" name="j2n6s300_gym" type="start_training.py" output="screen"/> -->
+</launch>

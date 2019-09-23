@@ -1,0 +1,8 @@
+prefix=/home/simon/sim2real/simulations/kinova/devel
+
+Name: kinova_driver
+Description: Description of kinova_driver
+Version: 0.0.1
+Cflags: -I/home/simon/sim2real/simulations/kinova/devel/include -I/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/include
+Libs: -L/home/simon/sim2real/simulations/kinova/devel/lib -lkinova_driver
+Requires: actionlib actionlib_msgs geometry_msgs kinova_msgs roscpp rospy sensor_msgs std_msgs tf interactive_markers visualization_msgs

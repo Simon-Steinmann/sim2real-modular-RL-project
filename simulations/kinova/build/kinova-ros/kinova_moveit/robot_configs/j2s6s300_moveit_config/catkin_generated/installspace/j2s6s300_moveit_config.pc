@@ -1,0 +1,8 @@
+prefix=/home/simon/sim2real/simulations/kinova/install
+
+Name: j2s6s300_moveit_config
+Description: Description of j2s6s300_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/simon/sim2real/simulations/kinova/install/lib 
+Requires: 

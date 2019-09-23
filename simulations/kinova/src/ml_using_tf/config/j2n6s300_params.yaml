@@ -1,0 +1,19 @@
+j2n6s300: #namespace
+
+    
+
+    #qlearn parameters
+    alpha: 0.4
+    gamma: 0.5
+    epsilon: 0.9
+    epsilon_discount: 0.999
+    nepisodes: 100
+    nsteps: 1000
+    number_splits: 10 #set to change the number of state splits for the continuous problem and also the number of env_variable splits
+
+
+    #Env parameters
+    n_actions: 12 #number of actions
+    pos_increment: 0.2     # increment in position for each command
+
+
