@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/simon/sim2real/simulations/kinova/src/ml_using_tf/include/robot_state_publisher/robot_state_publisher.h
+/home/acis/sim2real/simulations/kinova/src/ml_using_tf/include/robot_state_publisher/robot_state_publisher.h
 ros/ros.h
 -
 boost/scoped_ptr.hpp
@@ -26,7 +26,7 @@ kdl/segment.hpp
 kdl/tree.hpp
 -
 
-/home/simon/sim2real/simulations/kinova/src/ml_using_tf/src/robot_state_publisher.cpp
+/home/acis/sim2real/simulations/kinova/src/ml_using_tf/src/robot_state_publisher.cpp
 kdl/frames_io.hpp
 -
 geometry_msgs/TransformStamped.h
@@ -34,7 +34,7 @@ geometry_msgs/TransformStamped.h
 tf2_kdl/tf2_kdl.h
 -
 robot_state_publisher/robot_state_publisher.h
-/home/simon/sim2real/simulations/kinova/src/ml_using_tf/src/robot_state_publisher/robot_state_publisher.h
+/home/acis/sim2real/simulations/kinova/src/ml_using_tf/src/robot_state_publisher/robot_state_publisher.h
 
 /opt/ros/melodic/include/geometry_msgs/Point.h
 string

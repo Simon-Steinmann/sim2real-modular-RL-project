@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/simon/sim2real/simulations/kinova/devel/include/kinova_msgs/FingerPosition.h
+/home/acis/sim2real/simulations/kinova/devel/include/kinova_msgs/FingerPosition.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/simon/sim2real/simulations/kinova/devel/include/kinova_msgs/JointAngles.h
+/home/acis/sim2real/simulations/kinova/devel/include/kinova_msgs/JointAngles.h
 string
 -
 vector
@@ -38,7 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/simon/sim2real/simulations/kinova/devel/include/kinova_msgs/KinovaPose.h
+/home/acis/sim2real/simulations/kinova/devel/include/kinova_msgs/KinovaPose.h
 string
 -
 vector
@@ -54,9 +54,9 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/include/kinova/KinovaTypes.h
+/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/include/kinova/KinovaTypes.h
 
-/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/include/kinova_driver/kinova_ros_types.h
+/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/include/kinova_driver/kinova_ros_types.h
 kinova/KinovaTypes.h
 -
 geometry_msgs/Pose.h
@@ -74,7 +74,7 @@ tf/tf.h
 string
 -
 
-/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/src/motion_plan.cpp
+/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/src/motion_plan.cpp
 moveit/move_group_interface/move_group_interface.h
 -
 moveit/planning_scene_interface/planning_scene_interface.h

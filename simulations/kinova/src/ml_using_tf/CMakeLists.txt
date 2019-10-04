@@ -30,15 +30,17 @@ find_package(Eigen3 REQUIRED)
 
 find_package(urdfdom_headers REQUIRED)
 
+find_package(gazebo REQUIRED)
+
 catkin_package(
   LIBRARIES ${PROJECT_NAME}_solver joint_state_listener
   INCLUDE_DIRS include
-  DEPENDS roscpp rosconsole rostime tf2_ros tf2_kdl kdl_parser orocos_kdl urdfdom_headers
+  DEPENDS roscpp rosconsole rostime tf2_ros tf2_kdl kdl_parser orocos_kdl urdfdom_headers gazebo gazebo_msgs
 )
 
 include_directories(SYSTEM ${EIGEN3_INCLUDE_DIRS})
-include_directories(include ${catkin_INCLUDE_DIRS} ${orocos_kdl_INCLUDE_DIRS} ${urdfdom_headers_INCLUDE_DIRS})
-link_directories(${orocos_kdl_LIBRARY_DIRS})
+include_directories(include ${catkin_INCLUDE_DIRS} ${orocos_kdl_INCLUDE_DIRS} ${urdfdom_headers_INCLUDE_DIRS} ${GAZEBO_INCLUDE_DIRS})
+link_directories(${orocos_kdl_LIBRARY_DIRS} ${GAZEBO_LIBRARY_DIRS})
 
 add_library(${PROJECT_NAME}_solver
   src/robot_state_publisher.cpp
@@ -55,6 +57,9 @@ target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}_solver ${orocos_kdl_LIBRAR
 add_executable(state_publisher src/joint_state_listener.cpp)
 target_link_libraries(state_publisher ${PROJECT_NAME}_solver ${orocos_kdl_LIBRARIES})
 
+
+add_executable(listener src/listener.cpp)
+target_link_libraries(listener ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES} pthread)
 # Tests
 
 if (CATKIN_ENABLE_TESTING)

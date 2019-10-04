@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/universal_robot/devel
+
+Name: ur5_e_moveit_config
+Description: Description of ur5_e_moveit_config
+Version: 1.2.5
+Cflags: 
+Libs: -L/home/acis/sim2real/simulations/universal_robot/devel/lib 
+Requires: 

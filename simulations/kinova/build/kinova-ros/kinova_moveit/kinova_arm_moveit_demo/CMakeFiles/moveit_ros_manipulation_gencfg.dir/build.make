@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/simon/sim2real/simulations/kinova/src
+CMAKE_SOURCE_DIR = /home/acis/sim2real/simulations/kinova/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/simon/sim2real/simulations/kinova/build
+CMAKE_BINARY_DIR = /home/acis/sim2real/simulations/kinova/build
 
 # Utility rule file for moveit_ros_manipulation_gencfg.
 
@@ -63,10 +63,10 @@ kinova-ros/kinova_moveit/kinova_arm_moveit_demo/CMakeFiles/moveit_ros_manipulati
 .PHONY : kinova-ros/kinova_moveit/kinova_arm_moveit_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build
 
 kinova-ros/kinova_moveit/kinova_arm_moveit_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/clean:
-	cd /home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_moveit/kinova_arm_moveit_demo && $(CMAKE_COMMAND) -P CMakeFiles/moveit_ros_manipulation_gencfg.dir/cmake_clean.cmake
+	cd /home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_moveit/kinova_arm_moveit_demo && $(CMAKE_COMMAND) -P CMakeFiles/moveit_ros_manipulation_gencfg.dir/cmake_clean.cmake
 .PHONY : kinova-ros/kinova_moveit/kinova_arm_moveit_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/clean
 
 kinova-ros/kinova_moveit/kinova_arm_moveit_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/depend:
-	cd /home/simon/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/simon/sim2real/simulations/kinova/src /home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo /home/simon/sim2real/simulations/kinova/build /home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_moveit/kinova_arm_moveit_demo /home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acis/sim2real/simulations/kinova/src /home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo /home/acis/sim2real/simulations/kinova/build /home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_moveit/kinova_arm_moveit_demo /home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : kinova-ros/kinova_moveit/kinova_arm_moveit_demo/CMakeFiles/moveit_ros_manipulation_gencfg.dir/depend
 

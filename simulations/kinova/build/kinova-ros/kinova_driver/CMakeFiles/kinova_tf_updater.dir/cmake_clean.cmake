@@ -2,8 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/kinova_tf_updater.dir/src/kinova_ros_types.cpp.o"
   "CMakeFiles/kinova_tf_updater.dir/src/nodes/kinova_tf_updater.cpp.o"
   "CMakeFiles/kinova_tf_updater.dir/src/kinova_arm_kinematics.cpp.o"
-  "/home/simon/sim2real/simulations/kinova/devel/lib/kinova_driver/kinova_tf_updater.pdb"
-  "/home/simon/sim2real/simulations/kinova/devel/lib/kinova_driver/kinova_tf_updater"
+  "/home/acis/sim2real/simulations/kinova/devel/lib/kinova_driver/kinova_tf_updater.pdb"
+  "/home/acis/sim2real/simulations/kinova/devel/lib/kinova_driver/kinova_tf_updater"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -8,6 +8,7 @@ from trajectory_msgs.msg import JointTrajectoryPoint
 from gazebo_msgs.msg import LinkStates
 import time
 from gazebo_msgs.srv import SetModelConfiguration, SetModelConfigurationRequest
+from gazebo_msgs.msg import ContactsState
 from geometry_msgs.msg import Pose, PoseArray
 import tf
 
@@ -46,10 +47,14 @@ class j2n6s300Env(robot_gazebo_env.RobotGazeboEnv):
 
 
 
+
         # We Start all the ROS related Subscribers and publishers        
         self.joint_states_sub = rospy.Subscriber('/j2n6s300/joint_states', JointState, self.joint_states_callback) 
         #self.link_states_sub = rospy.Subscriber('/j2n6s300/link_states', LinkStates, self.link_states_callback) 
         self.link_states_sub = rospy.Subscriber('/gazebo/link_states', LinkStates, self.link_states_callback) 
+        
+
+        self.collision_sub = rospy.Subscriber('/j2n6s300/collision', ContactsState, self.collision_callback)
         
         self.pub = rospy.Publisher( '/j2n6s300/effort_joint_trajectory_controller/command', JointTrajectory, queue_size=1)
         self.pubf = rospy.Publisher( '/j2n6s300/effort_finger_trajectory_controller/command', JointTrajectory, queue_size=1)  
@@ -61,6 +66,11 @@ class j2n6s300Env(robot_gazebo_env.RobotGazeboEnv):
         self.joint_4_pos_pub = rospy.Publisher('/j2n6s300/joint_4_position_controller/command', Float64, queue_size=1)
         self.joint_5_pos_pub = rospy.Publisher('/j2n6s300/joint_5_position_controller/command', Float64, queue_size=1)
         self.joint_6_pos_pub = rospy.Publisher('/j2n6s300/joint_6_position_controller/command', Float64, queue_size=1)
+        self.finger_1_tip_pub = rospy.Publisher('/j2n6s300/finger_tip_1_position_controller/command', Float64, queue_size=1)
+        self.finger_2_tip_pub = rospy.Publisher('/j2n6s300/finger_tip_2_position_controller/command', Float64, queue_size=1)
+        self.finger_3_tip_pub = rospy.Publisher('/j2n6s300/finger_tip_3_position_controller/command', Float64, queue_size=1)
+    
+        self.collision_states = ContactsState()
     # Methods needed by the RobotGazeboEnv
     # ----------------------------
     
@@ -123,21 +133,10 @@ class j2n6s300Env(robot_gazebo_env.RobotGazeboEnv):
         
     # Methods that the TrainingEnvironment will need.
     # ----------------------------
-    def move_joints2(self, joint_positions):
-        print(joint_positions)
-        self.joint_1_pos_pub.publish(joint_positions[0])
-        self.joint_2_pos_pub.publish(joint_positions[1])
-        self.joint_3_pos_pub.publish(joint_positions[2])
-        self.joint_4_pos_pub.publish(joint_positions[3])
-        self.joint_5_pos_pub.publish(joint_positions[4])
-        self.joint_6_pos_pub.publish(joint_positions[5])
-        rospy.logdebug("moved Jaco2 joints to" + str(joint_positions))
+
     
-    def move_joints(self, jointcmds, duration):
-        print([ round(elem, 2) for elem in jointcmds ])
-        if not self.collision_bool:
-            start_jointcmds = self.joints.position
-        
+    def move_joints(self, jointcmds, duration=1.0, execute_duration=0.25):
+
         jointCmd = JointTrajectory()  
         jointCmd_finger = JointTrajectory()  
         point = JointTrajectoryPoint()
@@ -146,8 +145,9 @@ class j2n6s300Env(robot_gazebo_env.RobotGazeboEnv):
         point.time_from_start = rospy.Duration.from_sec(duration)
         jointCmd_finger.header.stamp = rospy.Time.now() + rospy.Duration.from_sec(0.0);  
         pointf.time_from_start = rospy.Duration.from_sec(duration)
-        print("Simulation-Time for step in ms: " +str((rospy.Time.now() - self.timer)/1000000 ))
+        print('step:',  self.n_step, "Sim-Time for step [ms]: " +str((rospy.Time.now() - self.timer)/1000000 ), 'min dist: ', self.min_distance )
         self.timer = rospy.Time.now()
+        self.timer_real = time.time()
         
         for i in range(0, 6):
             jointCmd.joint_names.append('j2n6s300_joint_'+str(i+1))
@@ -163,39 +163,43 @@ class j2n6s300Env(robot_gazebo_env.RobotGazeboEnv):
             pointf.accelerations.append(0)
             pointf.effort.append(0) 
         jointCmd_finger.points.append(pointf)
-        rate = rospy.Rate(100)
-        count = 0
-        
 
-        while (count < 10):
-            self.pub.publish(jointCmd)
-            self.pubf.publish(jointCmd_finger)
-            count = count + 1
-            rate.sleep()  
+        
+        while not rospy.is_shutdown():
+            connections = self.pub.get_num_connections()
+            if connections > 0:
+                self.pub.publish(jointCmd)
+                self.pubf.publish(jointCmd_finger)
+                self.finger_1_tip_pub.publish(0)
+                self.finger_2_tip_pub.publish(0)
+                self.finger_3_tip_pub.publish(0)
+                
+                break    
+        
         #wait unitil joints have been moved    
-        while rospy.Time.now() < self.timer + rospy.Duration.from_sec(duration) and not rospy.is_shutdown():
-            rospy.Rate(100).sleep()
-         
-        if not self.collision_bool:           
-            check = self.ground_collision_check()
-            check = self.collision_check(jointcmds)
-            if self.collision_bool: 
-                self.move_joints(start_jointcmds, 1.2*duration)
+        while rospy.Time.now() < self.timer + rospy.Duration.from_sec(execute_duration) and not rospy.is_shutdown():
+            if not self.reset_mode:
+                if self.collision_bool: 
+                    self.consecutive_errors += 1
+                    rospy.logerr("Collision!")
+                    break
+                rospy.Rate(100).sleep()
 
         
+
             
             
                 
         
-    def collision_check(self, jointcmds):
-        angle_delta =[] 
-        for i in xrange(9):
-            angle = self.joints.position[i]
-            angle_delta.append(round(jointcmds[i]-angle,4))
-        if not self.collision_bool and max(angle_delta) > 0.017:
-            rospy.logerr("Collision!...backtracking and giving negative reward")
+    def collision_check(self):
+        #print(self.collision_states.states)
+        if len(self.collision_states.states) == 0:            
+            self.collision_bool = False
+        else:
+            rospy.logerr("Collision!")
             self.consecutive_errors += 1
-            self.collision_bool = True
+            self.collision_bool = True 
+        return self.collision_bool
             
     def ground_collision_check(self):
         z_array = self.tf_transform()
@@ -243,3 +247,8 @@ class j2n6s300Env(robot_gazebo_env.RobotGazeboEnv):
     
     def link_states_callback(self, msg):
         self.link_states = msg
+        
+    def collision_callback(self, msg):
+        if not len(msg.states) == 0:  
+            self.collision_bool = True 
+        

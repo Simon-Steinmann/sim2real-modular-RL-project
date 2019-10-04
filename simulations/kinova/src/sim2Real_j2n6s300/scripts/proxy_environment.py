@@ -14,17 +14,17 @@ Option = 2
 
 # Option 1: 
 # Import your class
-from openai_ros.robot_gazebo_env import RobotGazeboEnv as option1class
+#from openai_ros.robot_gazebo_env import RobotGazeboEnv as option1class
 
 # Option 2: 
 # Set the environment ID
-env_id = 'j2n6s300Test-v0'
+env_id = 'j2n6s300Test-v1'
 
 #-----------------------------------------------------------------------------
 #---------------Init Area - run any code you want to initialize once here-----
 #-----------------------------------------------------------------------------
 import rospy #for exmaple when using ros, you can start a rosnode
-import j2n6s300_test #perhaps import a file, which has to be loaded
+import j2n6s300_test_discreet_actions #perhaps import a file, which has to be loaded
 rospy.init_node('j2n6s300_gym', anonymous=True, log_level=rospy.WARN)
 
 
@@ -51,7 +51,7 @@ class option2class(gym.Env):
         
 
     def step(self, action):
-        obs, reward, done, info = env.step(float(action))        
+        obs, reward, done, info = env.step(action)        
         return obs, reward, done, info
         
 
@@ -62,6 +62,14 @@ class option2class(gym.Env):
 
     def close(self):
         env.close()
+        
+    def get_variable(self, var_name): #make sure only standart python types are used
+        return(vars(env).get(var_name))
+        
+    def set_variable(self, var_name, value): #make sure only standart python types are used
+        dic = vars(env)
+        dic[var_name] = value
+        
 
 #-----------------------------------------------------------------------------
 #---------------------Convert our Class to ProxyClass-------------------------
@@ -103,5 +111,5 @@ daemon = Pyro4.Daemon()     # make a Pyro daemon
 uri = daemon.register(ExposedClass)    # register the exposed class rather than the library class itself
 ns.register("GymEnvProxy.Env1", uri)   # register the object with a name in the name server
 
-print(uri)
+print('Proxy Gym Environment is Ready!')
 daemon.requestLoop()    # start the event loop of the server to wait for calls

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/include/kinova_driver/joint_trajectory_action_server.h
+/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/include/kinova_driver/joint_trajectory_action_server.h
 ros/ros.h
 -
 actionlib/server/simple_action_server.h
@@ -16,7 +16,7 @@ control_msgs/FollowJointTrajectoryAction.h
 trajectory_msgs/JointTrajectoryPoint.h
 -
 
-/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/src/joint_trajectory_action/joint_trajectory_action_server.cpp
+/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/src/joint_trajectory_action/joint_trajectory_action_server.cpp
 kinova_driver/joint_trajectory_action_server.h
 -
 

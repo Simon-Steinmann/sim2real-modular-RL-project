@@ -9,11 +9,13 @@ import time
 # import tensorflow as tf
 from nn_builder.pytorch.NN import NN
 # from tensorboardX import SummaryWriter
-from torch.optim import optimizer
+#from torch.optim import optimizer
+from utilities.dynamic_graph_plot import DynamicGraphPlot
 
 class Base_Agent(object):
 
     def __init__(self, config):
+        
         self.logger = self.setup_logger()
         self.debug_mode = config.debug_mode
         # if self.debug_mode: self.tensorboard = SummaryWriter()
@@ -182,12 +184,15 @@ class Base_Agent(object):
 
     def run_n_episodes(self, num_episodes=None, show_whether_achieved_goal=True, save_and_print_results=True):
         """Runs game to completion n times and then summarises results and saves model (if asked to)"""
+        DynPlot = DynamicGraphPlot(self.agent_name)
+        if self.config.load_model: self.locally_load_policy()
         if num_episodes is None: num_episodes = self.config.num_episodes_to_run
         start = time.time()
         while self.episode_number < num_episodes:
             self.reset_game()
             self.step()
             if save_and_print_results: self.save_and_print_result()
+            if self.config.visualise_results_while_training: DynPlot.update_plot(len(self.game_full_episode_scores), self.rolling_results[-1])
         time_taken = time.time() - start
         if show_whether_achieved_goal: self.show_whether_achieved_goal()
         if self.config.save_model: self.locally_save_policy()
@@ -226,6 +231,7 @@ class Base_Agent(object):
         sys.stdout.write(text.format(len(self.game_full_episode_scores), self.rolling_results[-1], self.max_rolling_score_seen,
                                      self.game_full_episode_scores[-1], self.max_episode_score_seen))
         sys.stdout.flush()
+
 
     def show_whether_achieved_goal(self):
         """Prints out whether the agent achieved the environment target goal"""

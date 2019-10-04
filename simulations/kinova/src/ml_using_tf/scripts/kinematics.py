@@ -11,7 +11,7 @@ from mpl_toolkits.mplot3d import Axes3D
 class Jaco2Kinematics(object):
     def __init__(self):
         self.links1 = ikpy.URDF_utils.get_urdf_parameters(
-        '/home/simon/sim2real/simulations/kinova/src/ml_using_tf/urdf/j2n6s300.xarco', 
+        '/home/acis/sim2real/simulations/kinova/src/ml_using_tf/urdf/j2n6s300.xarco', 
         ["j2n6s300_link_base"] )
         self.chain1 = ikpy.chain.Chain(
             links=self.links1,

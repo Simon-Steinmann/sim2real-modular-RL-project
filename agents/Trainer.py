@@ -1,6 +1,7 @@
 import copy
 import random
 import pickle
+import json
 import os
 import gym
 from gym import wrappers
@@ -82,6 +83,7 @@ class Trainer(object):
                 self.visualise_overall_agent_results(agent_rolling_score_results, agent_name, show_mean_and_std_range=True)
         if self.config.file_to_save_data_results: self.save_obj(self.results, self.config.file_to_save_data_results)
         if self.config.file_to_save_results_graph: plt.savefig(self.config.file_to_save_results_graph, bbox_inches="tight")
+        if self.config.file_to_save_config: self.save_config(vars(self.config), self.config.file_to_save_config)
         plt.show()
         return self.results
 
@@ -246,6 +248,18 @@ class Trainer(object):
             name += ".pkl"
         with open(name, 'wb') as f:
             pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
+            
+    def save_config(self, obj, name):
+        """Saves given object as a json file"""
+        if name[-5:] != ".json":
+            name += ".json"
+        #for k, v in obj.items(): #loops through config dictionary and sets value types to string, so there is no conflic with json
+        #    obj[k] = str(v) 
+        obj['environment'] = str(obj['environment'])
+        #print(json.dumps(obj, indent=4, sort_keys=True))    
+        with open(name, 'w') as json_file:
+            json.dump(obj, json_file, indent=4,  sort_keys=True)   
+            
 
     def load_obj(self, name):
         """Loads a pickle file object"""
@@ -291,11 +305,4 @@ class Trainer(object):
         if show_image: plt.show()
 
         # ax.imshow(z, aspect="auto")
-
-
-
-
-
-
-
 

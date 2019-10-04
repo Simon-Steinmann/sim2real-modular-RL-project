@@ -1,6 +1,7 @@
 # saved as greeting-client.py
 import Pyro4
 import gym
+import numpy
 
 '''
 To implement the proxy gym environment all you have to do is the following:
@@ -20,11 +21,13 @@ To implement this, have a look at the included simulation-side template
 
 class ProxyGymEnv(gym.Env):
     def __init__(self, 
+                 proxyID='Env1',
                  action_space = None, 
                  observation_space = None, 
                  metadata = {'render.modes': []},
                  reward_range = (-float('inf'), float('inf')),
-                 spec = None):
+                 spec = None,
+                 ):
         
         self.action_space = action_space
         self.observation_space = observation_space
@@ -32,9 +35,9 @@ class ProxyGymEnv(gym.Env):
         self.reward_range = reward_range
         self.spec = spec    
         
-        
+        print(proxyID)
         self.id="ProxyGymEnv-v0"                                                                          
-        self.ProxyEnv = Pyro4.Proxy("PYRONAME:GymEnvProxy.Env1")  
+        self.ProxyEnv = Pyro4.Proxy("PYRONAME:GymEnvProxy."+proxyID)  
 
         
     def seed(self, seed=None):
@@ -43,7 +46,13 @@ class ProxyGymEnv(gym.Env):
         
 
     def step(self, action):
-        obs, reward, done, info = self.ProxyEnv.step(float(action))        
+        if type(action) == int: #discreet actions
+            obs, reward, done, info = self.ProxyEnv.step(float(action))
+        else:
+            #make sure the action is a list
+            action = numpy.array(action)
+            action = action.tolist()
+            obs, reward, done, info = self.ProxyEnv.step(action)  #continuous action  
         return obs, reward, done, info
         
 
@@ -60,7 +69,10 @@ class ProxyGymEnv(gym.Env):
         render = self.ProxyEnv.render()
         return render
     
-    def get_variable(self, var_name):
+    def get_variable(self, var_name): #get the value of a variable in the proxy environment
         value = self.ProxyEnv.get_variable(var_name)
         return(value)
+    
+    def set_variable(self, var_name, value):
+        self.ProxyEnv.set_variable(var_name, value)  
 

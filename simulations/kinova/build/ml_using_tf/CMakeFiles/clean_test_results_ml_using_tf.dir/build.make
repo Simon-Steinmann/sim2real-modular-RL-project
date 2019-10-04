@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/simon/sim2real/simulations/kinova/src
+CMAKE_SOURCE_DIR = /home/acis/sim2real/simulations/kinova/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/simon/sim2real/simulations/kinova/build
+CMAKE_BINARY_DIR = /home/acis/sim2real/simulations/kinova/build
 
 # Utility rule file for clean_test_results_ml_using_tf.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/simon/sim2real/simulations/kinova/build
 include ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf.dir/progress.make
 
 ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf:
-	cd /home/simon/sim2real/simulations/kinova/build/ml_using_tf && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/simon/sim2real/simulations/kinova/build/test_results/ml_using_tf
+	cd /home/acis/sim2real/simulations/kinova/build/ml_using_tf && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/acis/sim2real/simulations/kinova/build/test_results/ml_using_tf
 
 clean_test_results_ml_using_tf: ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf
 clean_test_results_ml_using_tf: ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf.dir/build.make
@@ -67,10 +67,10 @@ ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf.dir/build: clean_test_resu
 .PHONY : ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf.dir/build
 
 ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf.dir/clean:
-	cd /home/simon/sim2real/simulations/kinova/build/ml_using_tf && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_ml_using_tf.dir/cmake_clean.cmake
+	cd /home/acis/sim2real/simulations/kinova/build/ml_using_tf && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_ml_using_tf.dir/cmake_clean.cmake
 .PHONY : ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf.dir/clean
 
 ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf.dir/depend:
-	cd /home/simon/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/simon/sim2real/simulations/kinova/src /home/simon/sim2real/simulations/kinova/src/ml_using_tf /home/simon/sim2real/simulations/kinova/build /home/simon/sim2real/simulations/kinova/build/ml_using_tf /home/simon/sim2real/simulations/kinova/build/ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acis/sim2real/simulations/kinova/src /home/acis/sim2real/simulations/kinova/src/ml_using_tf /home/acis/sim2real/simulations/kinova/build /home/acis/sim2real/simulations/kinova/build/ml_using_tf /home/acis/sim2real/simulations/kinova/build/ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ml_using_tf/CMakeFiles/clean_test_results_ml_using_tf.dir/depend
 

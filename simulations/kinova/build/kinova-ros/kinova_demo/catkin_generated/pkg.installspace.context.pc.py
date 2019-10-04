@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "kinova_driver;kinova_msgs;roscpp;rospy;std_msgs;geometry_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "kinova_demo"
-PROJECT_SPACE_DIR = "/home/simon/sim2real/simulations/kinova/install"
+PROJECT_SPACE_DIR = "/home/acis/sim2real/simulations/kinova/install"
 PROJECT_VERSION = "0.0.1"

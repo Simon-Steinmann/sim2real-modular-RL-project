@@ -20,7 +20,7 @@ class j2n6s300_Environment(gym.Env):
         ))
 
         self.seed()
-        self.reward_threshold = 350
+        self.reward_threshold = 320
         self.trials = 10
         self.max_episode_steps = 360
         self.id = "Jaco Proxy Env Her"
@@ -45,15 +45,14 @@ class j2n6s300_Environment(gym.Env):
         obs = np.asarray(obs)
         for i in range(7):
             if obs[i*8+2] < 0.08:
-                ground_collide = True
-                
+                ground_collide = True                
             else: 
                 ground_collide = False
-        if ground_collide:
-            self.reward = -360
+        self.reward = self.compute_reward(obs[48:51], self.des_goal, info)
+        if self.done:
+            if ground_collide:
+                self.reward = self.step_reward_for_not_achieving_goal
             
-        else:
-             self.reward = self.compute_reward(obs[48:51], self.des_goal, info)
         #print(self.reward)  
         #print(obs[18])
         return {"observation": obs, "desired_goal": self.des_goal,

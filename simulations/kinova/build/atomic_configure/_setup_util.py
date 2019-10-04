@@ -264,7 +264,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = '/home/simon/sim2real-modular-RL-project/simulations/kinova/devel;/opt/ros/melodic'.split(';')
+            CMAKE_PREFIX_PATH = '/home/acis/sim2real/simulations/kinova/devel;/opt/ros/melodic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

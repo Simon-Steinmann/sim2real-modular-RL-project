@@ -1,8 +1,8 @@
-prefix=/home/simon/sim2real/simulations/kinova/devel
+prefix=/home/acis/sim2real/simulations/kinova/devel
 
 Name: ros_numpy
 Description: Description of ros_numpy
 Version: 0.0.2
 Cflags: 
-Libs: -L/home/simon/sim2real/simulations/kinova/devel/lib 
+Libs: -L/home/acis/sim2real/simulations/kinova/devel/lib 
 Requires: 

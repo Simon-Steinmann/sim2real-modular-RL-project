@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/src/work_scene.cpp
+/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/src/work_scene.cpp
 ros/ros.h
 -
 geometry_msgs/Pose.h

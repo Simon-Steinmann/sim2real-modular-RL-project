@@ -1,8 +1,8 @@
-# Install script for directory: /home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_bringup
+# Install script for directory: /home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_bringup
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/simon/sim2real/simulations/kinova/install")
+  set(CMAKE_INSTALL_PREFIX "/home/acis/sim2real/simulations/kinova/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringup.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringup.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_bringup/cmake" TYPE FILE FILES
-    "/home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringupConfig.cmake"
-    "/home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringupConfig-version.cmake"
+    "/home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringupConfig.cmake"
+    "/home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringupConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_bringup" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_bringup/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_bringup" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_bringup/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_bringup" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_bringup/launch/kinova_robot.launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_bringup" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_bringup/launch/kinova_robot.launch")
 endif()
 

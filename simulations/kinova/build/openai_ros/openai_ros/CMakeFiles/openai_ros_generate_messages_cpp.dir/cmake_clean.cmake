@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/openai_ros_generate_messages_cpp"
-  "/home/simon/sim2real/simulations/kinova/devel/include/openai_ros/RLExperimentInfo.h"
+  "/home/acis/sim2real/simulations/kinova/devel/include/openai_ros/RLExperimentInfo.h"
 )
 
 # Per-language clean rules from dependency scanning.

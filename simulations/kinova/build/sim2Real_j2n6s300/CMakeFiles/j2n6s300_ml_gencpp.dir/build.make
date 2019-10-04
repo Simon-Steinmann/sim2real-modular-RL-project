@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/simon/sim2real/simulations/kinova/src
+CMAKE_SOURCE_DIR = /home/acis/sim2real/simulations/kinova/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/simon/sim2real/simulations/kinova/build
+CMAKE_BINARY_DIR = /home/acis/sim2real/simulations/kinova/build
 
 # Utility rule file for j2n6s300_ml_gencpp.
 
@@ -63,10 +63,10 @@ sim2Real_j2n6s300/CMakeFiles/j2n6s300_ml_gencpp.dir/build: j2n6s300_ml_gencpp
 .PHONY : sim2Real_j2n6s300/CMakeFiles/j2n6s300_ml_gencpp.dir/build
 
 sim2Real_j2n6s300/CMakeFiles/j2n6s300_ml_gencpp.dir/clean:
-	cd /home/simon/sim2real/simulations/kinova/build/sim2Real_j2n6s300 && $(CMAKE_COMMAND) -P CMakeFiles/j2n6s300_ml_gencpp.dir/cmake_clean.cmake
+	cd /home/acis/sim2real/simulations/kinova/build/sim2Real_j2n6s300 && $(CMAKE_COMMAND) -P CMakeFiles/j2n6s300_ml_gencpp.dir/cmake_clean.cmake
 .PHONY : sim2Real_j2n6s300/CMakeFiles/j2n6s300_ml_gencpp.dir/clean
 
 sim2Real_j2n6s300/CMakeFiles/j2n6s300_ml_gencpp.dir/depend:
-	cd /home/simon/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/simon/sim2real/simulations/kinova/src /home/simon/sim2real/simulations/kinova/src/sim2Real_j2n6s300 /home/simon/sim2real/simulations/kinova/build /home/simon/sim2real/simulations/kinova/build/sim2Real_j2n6s300 /home/simon/sim2real/simulations/kinova/build/sim2Real_j2n6s300/CMakeFiles/j2n6s300_ml_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acis/sim2real/simulations/kinova/src /home/acis/sim2real/simulations/kinova/src/sim2Real_j2n6s300 /home/acis/sim2real/simulations/kinova/build /home/acis/sim2real/simulations/kinova/build/sim2Real_j2n6s300 /home/acis/sim2real/simulations/kinova/build/sim2Real_j2n6s300/CMakeFiles/j2n6s300_ml_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sim2Real_j2n6s300/CMakeFiles/j2n6s300_ml_gencpp.dir/depend
 

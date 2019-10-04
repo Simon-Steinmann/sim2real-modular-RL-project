@@ -1,3 +1,4 @@
+
 #! /usr/bin/env python
 """Publishes joint trajectory to move robot to given pose"""
 
@@ -23,20 +24,21 @@ def argumentParser(argument):
   return prefix, nbJoints, nbfingers
 
 def moveJoint (jointcmds):
-  topic_name =  '/j2n6s300_driver/trajectory_controller/command'
-  #topic_name =  '/j2n6s300/effort_joint_trajectory_controller/command'
-  print"DERP"
+  #topic_name =  '/j2n6s300_driver/trajectory_controller/command'
+  topic_name =  '/j2n6s300/effort_joint_trajectory_controller/command'
+
   pub = rospy.Publisher(topic_name, JointTrajectory, queue_size=1)
   jointCmd = JointTrajectory()  
   point = JointTrajectoryPoint()
   jointCmd.header.stamp = rospy.Time.now() + rospy.Duration.from_sec(0.0);  
-  point.time_from_start = rospy.Duration.from_sec(3.0)
+  point.time_from_start = rospy.Duration.from_sec(1.0)
   for i in range(0, 6):
     jointCmd.joint_names.append('j2n6s300_joint_'+str(i+1))
     point.positions.append(jointcmds[i])
     point.velocities.append(0)
     point.accelerations.append(0)
     point.effort.append(0) 
+
   jointCmd.points.append(point)
   rate = rospy.Rate(100)
   count = 0
@@ -44,7 +46,22 @@ def moveJoint (jointcmds):
     pub.publish(jointCmd)
     count = count + 1
     rate.sleep()     
-  time.sleep(3)
+  time.sleep(1)
+
+  vel = 0.4
+  start_time = rospy.get_time()
+  print(start_time)
+  while not rospy.is_shutdown():
+      jointCmd.header.stamp = rospy.Time.now() + rospy.Duration.from_sec(0.0);  
+      point.time_from_start = rospy.Duration.from_sec(1)
+      point.positions[0] = vel * float((rospy.get_time() - start_time))
+      #point.velocities[0] = vel
+      count = 0
+
+      pub.publish(jointCmd)
+   
+      rospy.Rate(10).sleep()
+ 
 
 def moveFingers (jointcmds):
   topic_name = '/j2n6s300/effort_finger_trajectory_controller/command'

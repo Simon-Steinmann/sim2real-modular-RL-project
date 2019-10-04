@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"kinova_driver\" -Dkinova_driver_EXPORTS
 
-CXX_INCLUDES = -I/home/simon/sim2real/simulations/kinova/devel/include -I/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/acis/sim2real/simulations/kinova/devel/include -I/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

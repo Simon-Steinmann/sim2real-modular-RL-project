@@ -1,8 +1,8 @@
-prefix=/home/simon/sim2real/simulations/kinova/install
+prefix=/home/acis/sim2real/simulations/kinova/install
 
 Name: j2n6s300_ikfast
 Description: Description of j2n6s300_ikfast
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/simon/sim2real/simulations/kinova/install/lib 
+Libs: -L/home/acis/sim2real/simulations/kinova/install/lib 
 Requires: moveit_core pluginlib roscpp tf_conversions

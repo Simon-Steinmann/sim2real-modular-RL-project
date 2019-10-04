@@ -7,7 +7,7 @@ from sys import path as sys_path
 
 from pkgutil import extend_path
 
-__extended_path = "/home/simon/sim2real/simulations/kinova/src/openai_ros/openai_ros/src".split(";")
+__extended_path = "/home/acis/sim2real/simulations/kinova/src/openai_ros/openai_ros/src".split(";")
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

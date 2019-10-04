@@ -52,7 +52,7 @@ class option2class(gym.Env):
         
 
     def step(self, action):
-        obs, reward, done, info = env.step(float(action))        
+        obs, reward, done, info = env.step(action)        
         return obs, reward, done, info
         
 
@@ -63,7 +63,16 @@ class option2class(gym.Env):
 
     def close(self):
         env.close()
-
+        
+        
+    def get_variable(self, var_name): # make sure only standart python types are used
+        return(vars(env).get(var_name))
+        
+        
+    def set_variable(self, var_name, value): # make sure only standart python types are used
+        dic = vars(env)
+        dic[var_name] = value
+        
 #-----------------------------------------------------------------------------
 #---------------------Convert our Class to ProxyClass-------------------------
 #-----------------------------------------------------------------------------
@@ -77,16 +86,17 @@ class NameServer(object):
         while True:
             try: 
                 print("Creating new Pyro4 name server") 
-                Pyro4.naming.startNSloop()  #creates name server in own thread, so it doesnt have to be run manually in console     
+                Pyro4.naming.startNSloop()  # creates name server in own thread, so it doesnt have to be run manually in console     
             except  Exception as e:   
                 print(e) 
                 break
         
         
         
-start_name_server = NameServer() 
+start_name_server = NameServer() # start the Pyro4 Name Server
+
 if Option == 1:
-    ExposedClass = Pyro4.expose(option1class) #Exposes our EnvClass, so it can be turned into a proxy class
+    ExposedClass = Pyro4.expose(option1class) # Exposes our EnvClass, so it can be turned into a proxy class
 elif Option == 2:
     ExposedClass = Pyro4.expose(option2class) 
 else:
@@ -95,7 +105,7 @@ else:
 while True:    
     try: 
         ns = Pyro4.locateNS()
-        print("Found Pyro4 name server")  #find the name server
+        print("Found Pyro4 name server")  # find the name server
         break
     except  Exception as e:   
         print(e)
@@ -104,5 +114,5 @@ daemon = Pyro4.Daemon()     # make a Pyro daemon
 uri = daemon.register(ExposedClass)    # register the exposed class rather than the library class itself
 ns.register("GymEnvProxy.Env1", uri)   # register the object with a name in the name server
 
-print(uri)
+print('Proxy Gym Environment is Ready!')
 daemon.requestLoop()    # start the event loop of the server to wait for calls

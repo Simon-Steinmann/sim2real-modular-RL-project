@@ -1,8 +1,8 @@
-prefix=/home/simon/sim2real/simulations/kinova/install
+prefix=/home/acis/sim2real/simulations/kinova/install
 
 Name: kinova_arm_moveit_demo
 Description: Description of kinova_arm_moveit_demo
 Version: 0.6.3
-Cflags: -I/home/simon/sim2real/simulations/kinova/install/include
-Libs: -L/home/simon/sim2real/simulations/kinova/install/lib 
+Cflags: -I/home/acis/sim2real/simulations/kinova/install/include
+Libs: -L/home/acis/sim2real/simulations/kinova/install/lib 
 Requires: moveit_core moveit_ros_planning_interface interactive_markers eigen_conversions

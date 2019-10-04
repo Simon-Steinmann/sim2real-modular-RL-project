@@ -31,18 +31,18 @@ class GazeboConnection():
         self.pauseSim()
 
     def pauseSim(self):
-        rospy.logwarn("PAUSING START")
+        rospy.loginfo("PAUSING START")
         rospy.wait_for_service('/gazebo/pause_physics')
-        rospy.logwarn("PAUSING service found...")
+        rospy.loginfo("PAUSING service found...")
         paused_done = False
         counter = 0
         while not paused_done and not rospy.is_shutdown():
             if counter < self._max_retry:
                 try:
-                    rospy.logwarn("PAUSING service calling...")
+                    rospy.loginfo("PAUSING service calling...")
                     self.pause()
                     paused_done = True
-                    rospy.logwarn("PAUSING service calling...DONE")
+                    rospy.loginfo("PAUSING service calling...DONE")
                 except rospy.ServiceException as e:
                     counter += 1
                     rospy.logerr("/gazebo/pause_physics service call failed")
@@ -54,18 +54,18 @@ class GazeboConnection():
         rospy.logdebug("PAUSING FINISH")
 
     def unpauseSim(self):
-        rospy.logwarn("UNPAUSING START")
+        rospy.loginfo("UNPAUSING START")
         rospy.wait_for_service('/gazebo/unpause_physics')
-        rospy.logwarn("UNPAUSING service found...")
+        rospy.loginfo("UNPAUSING service found...")
         unpaused_done = False
         counter = 0
         while not unpaused_done and not rospy.is_shutdown():
             if counter < self._max_retry:
                 try:
-                    rospy.logwarn("UNPAUSING service calling...")
+                    rospy.loginfo("UNPAUSING service calling...")
                     self.unpause()
                     unpaused_done = True
-                    rospy.logwarn("UNPAUSING service calling...DONE")
+                    rospy.loginfo("UNPAUSING service calling...DONE")
                 except rospy.ServiceException as e:
                     counter += 1
                     rospy.logerr("/gazebo/unpause_physics service call failed...Retrying "+str(counter))

@@ -3,7 +3,7 @@ import torch.nn.functional as functional
 from torch import optim
 from agents.Base_Agent import Base_Agent
 from utilities.data_structures.Replay_Buffer import Replay_Buffer
-from exploration_strategies.OU_Noise_Exploration import OU_Noise_Exploration
+from utilities.exploration_strategies.OU_Noise_Exploration import OU_Noise_Exploration
 
 class DDPG(Base_Agent):
     """A DDPG Agent"""

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/simon/sim2real/simulations/kinova/src
+CMAKE_SOURCE_DIR = /home/acis/sim2real/simulations/kinova/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/simon/sim2real/simulations/kinova/build
+CMAKE_BINARY_DIR = /home/acis/sim2real/simulations/kinova/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/simon/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/simon/sim2real/simulations/kinova/build/CMakeFiles /home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_demo/CMakeFiles/progress.marks
-	cd /home/simon/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_demo/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/simon/sim2real/simulations/kinova/build/CMakeFiles 0
+	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/acis/sim2real/simulations/kinova/build/CMakeFiles /home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_demo/CMakeFiles/progress.marks
+	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_demo/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acis/sim2real/simulations/kinova/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/simon/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_demo/clean
+	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_demo/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,17 +154,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/simon/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_demo/preinstall
+	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_demo/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/simon/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_demo/preinstall
+	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_demo/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/simon/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -191,6 +191,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/simon/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

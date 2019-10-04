@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/simon/sim2real/simulations/kinova/src
+CMAKE_SOURCE_DIR = /home/acis/sim2real/simulations/kinova/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/simon/sim2real/simulations/kinova/build
+CMAKE_BINARY_DIR = /home/acis/sim2real/simulations/kinova/build
 
 # Utility rule file for openai_ros_gennodejs.
 
@@ -63,10 +63,10 @@ openai_ros/openai_ros/CMakeFiles/openai_ros_gennodejs.dir/build: openai_ros_genn
 .PHONY : openai_ros/openai_ros/CMakeFiles/openai_ros_gennodejs.dir/build
 
 openai_ros/openai_ros/CMakeFiles/openai_ros_gennodejs.dir/clean:
-	cd /home/simon/sim2real/simulations/kinova/build/openai_ros/openai_ros && $(CMAKE_COMMAND) -P CMakeFiles/openai_ros_gennodejs.dir/cmake_clean.cmake
+	cd /home/acis/sim2real/simulations/kinova/build/openai_ros/openai_ros && $(CMAKE_COMMAND) -P CMakeFiles/openai_ros_gennodejs.dir/cmake_clean.cmake
 .PHONY : openai_ros/openai_ros/CMakeFiles/openai_ros_gennodejs.dir/clean
 
 openai_ros/openai_ros/CMakeFiles/openai_ros_gennodejs.dir/depend:
-	cd /home/simon/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/simon/sim2real/simulations/kinova/src /home/simon/sim2real/simulations/kinova/src/openai_ros/openai_ros /home/simon/sim2real/simulations/kinova/build /home/simon/sim2real/simulations/kinova/build/openai_ros/openai_ros /home/simon/sim2real/simulations/kinova/build/openai_ros/openai_ros/CMakeFiles/openai_ros_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acis/sim2real/simulations/kinova/src /home/acis/sim2real/simulations/kinova/src/openai_ros/openai_ros /home/acis/sim2real/simulations/kinova/build /home/acis/sim2real/simulations/kinova/build/openai_ros/openai_ros /home/acis/sim2real/simulations/kinova/build/openai_ros/openai_ros/CMakeFiles/openai_ros_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : openai_ros/openai_ros/CMakeFiles/openai_ros_gennodejs.dir/depend
 

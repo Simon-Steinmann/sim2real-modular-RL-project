@@ -1,8 +1,8 @@
-# Install script for directory: /home/simon/sim2real/simulations/kinova/src/ros_numpy
+# Install script for directory: /home/acis/sim2real/simulations/kinova/src/ros_numpy
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/simon/sim2real/simulations/kinova/install")
+  set(CMAKE_INSTALL_PREFIX "/home/acis/sim2real/simulations/kinova/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/simon/sim2real/simulations/kinova/build/ros_numpy/catkin_generated/safe_execute_install.cmake")
+  include("/home/acis/sim2real/simulations/kinova/build/ros_numpy/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/build/ros_numpy/catkin_generated/installspace/ros_numpy.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/build/ros_numpy/catkin_generated/installspace/ros_numpy.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_numpy/cmake" TYPE FILE FILES
-    "/home/simon/sim2real/simulations/kinova/build/ros_numpy/catkin_generated/installspace/ros_numpyConfig.cmake"
-    "/home/simon/sim2real/simulations/kinova/build/ros_numpy/catkin_generated/installspace/ros_numpyConfig-version.cmake"
+    "/home/acis/sim2real/simulations/kinova/build/ros_numpy/catkin_generated/installspace/ros_numpyConfig.cmake"
+    "/home/acis/sim2real/simulations/kinova/build/ros_numpy/catkin_generated/installspace/ros_numpyConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_numpy" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/src/ros_numpy/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_numpy" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/src/ros_numpy/package.xml")
 endif()
 

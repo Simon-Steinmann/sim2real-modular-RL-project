@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/simon/sim2real/simulations/kinova/src
+CMAKE_SOURCE_DIR = /home/acis/sim2real/simulations/kinova/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/simon/sim2real/simulations/kinova/build
+CMAKE_BINARY_DIR = /home/acis/sim2real/simulations/kinova/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/build: _c
 .PHONY : kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/simon/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/simon/sim2real/simulations/kinova/src /home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_bringup /home/simon/sim2real/simulations/kinova/build /home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup /home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acis/sim2real/simulations/kinova/src /home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_bringup /home/acis/sim2real/simulations/kinova/build /home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup /home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

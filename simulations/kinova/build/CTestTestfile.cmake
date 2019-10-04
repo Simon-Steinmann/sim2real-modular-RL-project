@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/simon/sim2real/simulations/kinova/src
-# Build directory: /home/simon/sim2real/simulations/kinova/build
+# Source directory: /home/acis/sim2real/simulations/kinova/src
+# Build directory: /home/acis/sim2real/simulations/kinova/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -14,6 +14,7 @@ subdirs("openai_ros/openai_ros")
 subdirs("kinova-ros/kinova_msgs")
 subdirs("kinova-ros/kinova_driver")
 subdirs("kinova-ros/kinova_demo")
+subdirs("kinova-ros/kinova_plugin")
 subdirs("ml_using_tf")
 subdirs("kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2n6s300_ikfast")
 subdirs("kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast")

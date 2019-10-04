@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/universal_robot/install
+
+Name: ur_driver
+Description: Description of ur_driver
+Version: 1.2.5
+Cflags: -I/home/acis/sim2real/simulations/universal_robot/install/include
+Libs: -L/home/acis/sim2real/simulations/universal_robot/install/lib 
+Requires: dynamic_reconfigure

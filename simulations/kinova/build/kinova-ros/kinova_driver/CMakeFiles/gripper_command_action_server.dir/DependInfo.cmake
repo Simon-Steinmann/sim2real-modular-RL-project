@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/src/joint_trajectory_action/gripper_command_action_server.cpp" "/home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/src/joint_trajectory_action/gripper_command_action_server.cpp.o"
+  "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/src/joint_trajectory_action/gripper_command_action_server.cpp" "/home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/src/joint_trajectory_action/gripper_command_action_server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,8 +17,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/simon/sim2real/simulations/kinova/devel/include"
-  "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/include"
+  "/home/acis/sim2real/simulations/kinova/devel/include"
+  "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_driver/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/simon/sim2real/simulations/kinova/src
+CMAKE_SOURCE_DIR = /home/acis/sim2real/simulations/kinova/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/simon/sim2real/simulations/kinova/build
+CMAKE_BINARY_DIR = /home/acis/sim2real/simulations/kinova/build
 
 # Utility rule file for clean_test_results_ros_numpy.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/simon/sim2real/simulations/kinova/build
 include ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/progress.make
 
 ros_numpy/CMakeFiles/clean_test_results_ros_numpy:
-	cd /home/simon/sim2real/simulations/kinova/build/ros_numpy && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/simon/sim2real/simulations/kinova/build/test_results/ros_numpy
+	cd /home/acis/sim2real/simulations/kinova/build/ros_numpy && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/acis/sim2real/simulations/kinova/build/test_results/ros_numpy
 
 clean_test_results_ros_numpy: ros_numpy/CMakeFiles/clean_test_results_ros_numpy
 clean_test_results_ros_numpy: ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/build.make
@@ -67,10 +67,10 @@ ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/build: clean_test_results_
 .PHONY : ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/build
 
 ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/clean:
-	cd /home/simon/sim2real/simulations/kinova/build/ros_numpy && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_ros_numpy.dir/cmake_clean.cmake
+	cd /home/acis/sim2real/simulations/kinova/build/ros_numpy && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_ros_numpy.dir/cmake_clean.cmake
 .PHONY : ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/clean
 
 ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/depend:
-	cd /home/simon/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/simon/sim2real/simulations/kinova/src /home/simon/sim2real/simulations/kinova/src/ros_numpy /home/simon/sim2real/simulations/kinova/build /home/simon/sim2real/simulations/kinova/build/ros_numpy /home/simon/sim2real/simulations/kinova/build/ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acis/sim2real/simulations/kinova/src /home/acis/sim2real/simulations/kinova/src/ros_numpy /home/acis/sim2real/simulations/kinova/build /home/acis/sim2real/simulations/kinova/build/ros_numpy /home/acis/sim2real/simulations/kinova/build/ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/depend
 

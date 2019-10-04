@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/openai_ros_generate_messages_nodejs"
-  "/home/simon/sim2real/simulations/kinova/devel/share/gennodejs/ros/openai_ros/msg/RLExperimentInfo.js"
+  "/home/acis/sim2real/simulations/kinova/devel/share/gennodejs/ros/openai_ros/msg/RLExperimentInfo.js"
 )
 
 # Per-language clean rules from dependency scanning.

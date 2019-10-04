@@ -1,8 +1,8 @@
-# Install script for directory: /home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_gazebo
+# Install script for directory: /home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_gazebo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/simon/sim2real/simulations/kinova/install")
+  set(CMAKE_INSTALL_PREFIX "/home/acis/sim2real/simulations/kinova/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_gazebo/catkin_generated/installspace/kinova_gazebo.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_gazebo/catkin_generated/installspace/kinova_gazebo.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_gazebo/cmake" TYPE FILE FILES
-    "/home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_gazebo/catkin_generated/installspace/kinova_gazeboConfig.cmake"
-    "/home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_gazebo/catkin_generated/installspace/kinova_gazeboConfig-version.cmake"
+    "/home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_gazebo/catkin_generated/installspace/kinova_gazeboConfig.cmake"
+    "/home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_gazebo/catkin_generated/installspace/kinova_gazeboConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_gazebo" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_gazebo/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_gazebo" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_gazebo/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_gazebo" TYPE DIRECTORY FILES "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_gazebo/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_gazebo" TYPE DIRECTORY FILES "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_gazebo/launch")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_gazebo" TYPE DIRECTORY FILES "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_gazebo/worlds")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_gazebo" TYPE DIRECTORY FILES "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_gazebo/worlds")
 endif()
 

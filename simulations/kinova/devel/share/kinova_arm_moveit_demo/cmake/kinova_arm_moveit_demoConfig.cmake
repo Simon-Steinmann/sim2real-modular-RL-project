@@ -67,14 +67,14 @@ set(kinova_arm_moveit_demo_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(kinova_arm_moveit_demo_SOURCE_PREFIX /home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo)
-  set(kinova_arm_moveit_demo_DEVEL_PREFIX /home/simon/sim2real/simulations/kinova/devel)
+  set(kinova_arm_moveit_demo_SOURCE_PREFIX /home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo)
+  set(kinova_arm_moveit_demo_DEVEL_PREFIX /home/acis/sim2real/simulations/kinova/devel)
   set(kinova_arm_moveit_demo_INSTALL_PREFIX "")
   set(kinova_arm_moveit_demo_PREFIX ${kinova_arm_moveit_demo_DEVEL_PREFIX})
 else()
   set(kinova_arm_moveit_demo_SOURCE_PREFIX "")
   set(kinova_arm_moveit_demo_DEVEL_PREFIX "")
-  set(kinova_arm_moveit_demo_INSTALL_PREFIX /home/simon/sim2real/simulations/kinova/install)
+  set(kinova_arm_moveit_demo_INSTALL_PREFIX /home/acis/sim2real/simulations/kinova/install)
   set(kinova_arm_moveit_demo_PREFIX ${kinova_arm_moveit_demo_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(kinova_arm_moveit_demo_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/include " STREQUAL " ")
+if(NOT "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/include " STREQUAL " ")
   set(kinova_arm_moveit_demo_INCLUDE_DIRS "")
-  set(_include_dirs "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/include")
+  set(_include_dirs "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kin
         message(FATAL_ERROR "Project 'kinova_arm_moveit_demo' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'kinova_arm_moveit_demo' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'kinova_arm_moveit_demo' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/${idir}'.  ${_report}")
     endif()
     _list_append_unique(kinova_arm_moveit_demo_INCLUDE_DIRS ${include})
   endforeach()
@@ -131,7 +131,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/simon/sim2real/simulations/kinova/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/acis/sim2real/simulations/kinova/devel/lib;/home/acis/sim2real/simulations/kinova/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

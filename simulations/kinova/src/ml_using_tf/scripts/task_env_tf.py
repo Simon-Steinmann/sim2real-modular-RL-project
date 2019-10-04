@@ -90,16 +90,18 @@ class j2n6s300TestEnv(gym.Env):
                 action_pos[i] = positions[i] + self.joint_pos_increment_value
             action -= 2
             
-        #point = [1,1,1]      
-        #init_point = self.kinematics.RandomPointInSphere(self.inner_radius, self.outer_radius, point)
-        #action_pos = self.kinematics.Target2JointPos(init_point)        
-            
+        obs = self.get_obs(action_pos)     
+        for i in range(7):
+            if obs[i*8+2] < 0.08:
+                action_pos = list(self.init_positions)  
+                obs = self.get_obs(action_pos)
+
             
             
         self.joint_state_pub(action_pos)
-
+        
         self.n_step += 1  
-        obs = self.get_obs(action_pos)
+        
         info = self.info        
         reward = self.get_reward(obs)
         #reward = 0
@@ -158,7 +160,8 @@ class j2n6s300TestEnv(gym.Env):
             obs[i*8+5] = rot.z
             obs[i*8+6] = rot.w
             obs[i*8+7] = positions[i]
-            
+       
+
             
         #self.obs_buffer.append(obs)    
         

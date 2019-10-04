@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =   -std=c++11 -Wall -Wextra
 
-CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ml_using_tf\"
+CXX_DEFINES = -DLIBBULLET_VERSION=2.87 -DLIBBULLET_VERSION_GT_282 -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ml_using_tf\"
 
-CXX_INCLUDES = -isystem /usr/include/eigen3 -I/home/simon/sim2real/simulations/kinova/src/ml_using_tf/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/src/googletest/googletest/include 
+CXX_INCLUDES = -isystem /usr/include/eigen3 -I/home/acis/sim2real/simulations/kinova/src/ml_using_tf/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/gazebo-9 -I/usr/include/bullet -I/usr/include/simbody -I/usr/include/sdformat-6.0 -I/usr/include/ignition/math4 -I/usr/include/OGRE -I/usr/include/OGRE/Terrain -I/usr/include/OGRE/Paging -I/usr/include/ignition/transport4 -I/usr/include/ignition/msgs1 -I/usr/include/ignition/common1 -I/usr/include/ignition/fuel_tools1 -I/usr/src/googletest/googletest/include 
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_description
+# Install script for directory: /home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/simon/sim2real/simulations/kinova/install")
+  set(CMAKE_INSTALL_PREFIX "/home/acis/sim2real/simulations/kinova/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,28 +38,28 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_description/catkin_generated/installspace/kinova_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_description/catkin_generated/installspace/kinova_description.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_description/cmake" TYPE FILE FILES
-    "/home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_description/catkin_generated/installspace/kinova_descriptionConfig.cmake"
-    "/home/simon/sim2real/simulations/kinova/build/kinova-ros/kinova_description/catkin_generated/installspace/kinova_descriptionConfig-version.cmake"
+    "/home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_description/catkin_generated/installspace/kinova_descriptionConfig.cmake"
+    "/home/acis/sim2real/simulations/kinova/build/kinova-ros/kinova_description/catkin_generated/installspace/kinova_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_description" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_description" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_description/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_description" TYPE DIRECTORY FILES
-    "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_description/launch"
-    "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_description/urdf"
+    "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_description/launch"
+    "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_description/urdf"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_description" TYPE DIRECTORY FILES "/home/simon/sim2real/simulations/kinova/src/kinova-ros/kinova_description/meshes" FILES_MATCHING REGEX "/[^/]*\\.dae$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_description" TYPE DIRECTORY FILES "/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_description/meshes" FILES_MATCHING REGEX "/[^/]*\\.dae$")
 endif()
 

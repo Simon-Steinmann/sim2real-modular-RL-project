@@ -1,8 +1,8 @@
-prefix=/home/simon/sim2real/simulations/kinova/install
+prefix=/home/acis/sim2real/simulations/kinova/install
 
 Name: kinova_msgs
 Description: Description of kinova_msgs
 Version: 0.0.1
-Cflags: -I/home/simon/sim2real/simulations/kinova/install/include
-Libs: -L/home/simon/sim2real/simulations/kinova/install/lib 
+Cflags: -I/home/acis/sim2real/simulations/kinova/install/include
+Libs: -L/home/acis/sim2real/simulations/kinova/install/lib 
 Requires: actionlib_msgs geometry_msgs message_runtime

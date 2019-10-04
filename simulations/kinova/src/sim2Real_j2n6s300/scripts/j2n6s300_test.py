@@ -5,7 +5,7 @@ from gym import spaces
 import j2n6s300_env
 from gym.envs.registration import register
 from geometry_msgs.msg import Point
-from time import sleep
+import time
 import tf
 
 # The path is __init__.py of openai_ros, where we import the MovingCubeOneDiskWalkEnv directly
@@ -20,14 +20,6 @@ register(
 class j2n6s300TestEnv(j2n6s300_env.j2n6s300Env):
     def __init__(self):
         
-        # Only variable needed to be set here
-        number_actions = rospy.get_param('/j2n6s300/n_actions')
-        self.action_space = spaces.Discrete(6)
-        
-        # This is the most common case of Box observation type
-        high = numpy.full((24),numpy.inf)
-            
-        self.observation_space = spaces.Box(-high, high)
         
         # Variables that we retrieve through the param server, loded when launch training launch.
         self.timer = rospy.Time.now()
@@ -40,14 +32,17 @@ class j2n6s300TestEnv(j2n6s300_env.j2n6s300Env):
         self.jointcmds_history = []
         self.delta_angle = pi
         self.joint_pos_increment_value = 0.2
-        self.max_roll_angle = pi*0.4
-        self.max_pitch_angle = pi*0.4
-        self.max_joint_position = pi/2
-        self.max_joint_velocity = 10
-        self.running_step = 0.35
+        
+        self.timer_real = time.time()
+        self.running_step = 0.05
         self.n_step = 0
+        self.max_vel = 0.7 #rad/s
         self.n_episode = 0
         self.consecutive_errors = 0
+        self.min_distance = 10
+        self.target_point = [0.5, 0.5, 0.5]
+        
+        
         self.joint_names = ['j2n6s300_joint_1', 'j2n6s300_joint_2', 'j2n6s300_joint_3', 'j2n6s300_joint_4', 'j2n6s300_joint_5', 'j2n6s300_joint_6', 'j2n6s300_finger_1', 'j2n6s300_finger_2', 'j2n6s300_finger_3']
         self.listener = tf.TransformListener(True, rospy.Duration(10.0))
         self.frame_list = ['root',
@@ -62,8 +57,10 @@ class j2n6s300TestEnv(j2n6s300_env.j2n6s300Env):
     def _set_init_pose(self):
         """Sets the Robot in its init pose  
         """
+        self.reset_mode = True
         self.collision_bool = True #set collision as true, so moving to init pose doesnt get collision checked. arm could get stuck otherwise
-        self.move_joints(self.init_pose, 2) 
+        self.move_joints(self.init_pose, 1, 2.5) 
+        self.reset_mode = False
         return True
 
     def _init_env_variables(self):
@@ -75,42 +72,40 @@ class j2n6s300TestEnv(j2n6s300_env.j2n6s300Env):
         self.reward = 0
         self.n_step = 0
         self.consecutive_errors = 0
+        self.min_distance = 10
 
 
     def _set_action(self, action):
         """
         Move the robot based on the action variable given
         """
-        if not self.collision_bool:
-            self.consecutive_errors = 0
+        self.n_step += 1
+        #print('step:',  self.n_step)
+        #if not self.collision_bool:
+        #    self.consecutive_errors = 0
         self.collision_bool = False
         self.action = action
-        rospy.logwarn("action: " + str(action))
+        #rospy.logwarn("action: " + str(action))
         joints = self.get_joints()
-
         positions = joints.position
         action_pos = list(self.init_pose)
         
-        for i in xrange(3):
-            action_pos[i] = positions[i]
-            if action == 0:
-                action_pos[i] = positions[i] - self.joint_pos_increment_value
-            elif action == 1:
-                action_pos[i] = positions[i] + self.joint_pos_increment_value
-            action -= 2
+        for i in range(len(action)):
+            action_pos[i] =   positions[i] + self.max_vel * action[i]
 
         # 1st: unpause simulation
         rospy.logdebug("Unpause SIM...")
-        self.gazebo.unpauseSim()
-
-        self.move_joints(action_pos,self.running_step)
+        #self.gazebo.unpauseSim()
+        #print(action_pos)
+        #rospy.logwarn('starting next move '+str((time.time()-self.timer_real)*1000 ))
+        self.move_joints(jointcmds=action_pos, duration=1, execute_duration=self.running_step) 
         rospy.logdebug("Wait for some time to execute movement, time="+str(self.running_step))
 
         rospy.logdebug("DONE Wait for some time to execute movement, time=" + str(self.running_step))
 
         # 3rd: pause simulation
         rospy.logdebug("Pause SIM...")
-        self.gazebo.pauseSim()
+        #self.gazebo.pauseSim()
 
     def _get_obs(self):
         """
@@ -119,50 +114,46 @@ class j2n6s300TestEnv(j2n6s300_env.j2n6s300Env):
         MyRobotEnv API DOCS
         :return: observations
         """
+        #print('get obs '+str((time.time()-self.timer_real)*1000 ))
         data = self.get_joints()
         links = self.link_states
         del links.pose[0]
-        x_diff = abs(0.5-self.link_states.pose[6].position.x)
-        y_diff = abs(0.5-self.link_states.pose[6].position.y)
-        z_diff = abs(0.5-self.link_states.pose[6].position.z)
-        dist2target = sqrt(x_diff**2 + y_diff**2 + z_diff**2)
-        
-        
-        
-        obs = [
-            dist2target,
-            self.delta_angle,
-            links.pose[5].position.x,
-            links.pose[5].position.y,
-            links.pose[5].position.z,
-            round(data.position[0],1),
-            round(data.position[1],1),
-            round(data.position[2],1),
-            round(data.position[3],1),
-            round(data.position[4],1),
-            round(data.position[5],1),            
-            ]
-         
-        for pose in  links.pose:
-            #obs.append(pose.position.x)
-            #obs.append(pose.position.y)
-            obs.append(pose.position.z)
-        
-        return obs
+        del links.twist[0]
+        del links.pose[0]
+        del links.twist[0]
+        obs =  numpy.zeros(56)
+        for  i in range(7):
+            tran = links.pose[i].position
+            rot = links.pose[i].orientation
+            obs[i*8+0] = tran.x
+            obs[i*8+1] = tran.y
+            obs[i*8+2] = tran.z
+            obs[i*8+3] = rot.x
+            obs[i*8+4] = rot.y
+            obs[i*8+5] = rot.z
+            obs[i*8+6] = rot.w
+            obs[i*8+7] = data.position[i]
+            
+        deltax = obs[5*8+0]-self.target_point[0]
+        deltay = obs[5*8+1]-self.target_point[1]
+        deltaz = obs[5*8+2]-self.target_point[2]
+        distance = sqrt(deltax**2+deltay**2+deltaz**2)
+        self.min_distance = min(distance, self.min_distance)    
+        #print('return obs '+str((time.time()-self.timer_real)*1000 ))
+        return(obs.tolist())  
+
+
 
     def _is_done(self, observations):
         """
         Decide if episode is done based on the observations
         """
-        if self.reward > 200:
-            self.n_episode += 1
-            done = True
-        elif self.consecutive_errors > 3:
+
+        if self.consecutive_errors > 0:
             self.reward = -1000
             self.n_episode += 1
             done = True
         elif  self.n_step == 998:
-            self.reward = -500
             self.n_episode += 1
             done = True
         else:
@@ -174,35 +165,17 @@ class j2n6s300TestEnv(j2n6s300_env.j2n6s300Env):
         Return the reward based on the observations given        
         """
         
-        x_diff = abs(0.5-self.link_states.pose[6].position.x)
-        y_diff = abs(0.5-self.link_states.pose[6].position.y)
-        z_diff = abs(0.5-self.link_states.pose[6].position.z)
-        distance = sqrt(x_diff**2 + y_diff**2 + z_diff**2)
-        self.reward = min(200 , 15/(distance**2))
-        #give incentive for joint_3 to be high above the ground instead of low
-        self.reward -= 5*(0.5- self.link_states.pose[3].position.z)
-        if self.link_states.pose[3].position.z < 0.5:
-            self.reward  -= 1/self.link_states.pose[3].position.z
-        
-        #give incentive to turn the robot towards the target
-        rot = self.link_states.pose[6].orientation
-        (roll, pitch, yaw) = tf.transformations.euler_from_quaternion([rot.x, rot.y, rot.z, rot.w])
-        rot = self.link_states.pose[6].orientation
-        (roll, pitch, yaw) = tf.transformations.euler_from_quaternion([rot.x, rot.y, rot.z, rot.w])
-        target_angle = atan2(0.5,0.5)
-        self.delta_angle = target_angle-yaw
-        if self.delta_angle > pi:
-            self.delta_angle -= 2*pi
-        elif self.delta_angle < -pi:
-            self.delta_angle += 2*pi
-        self.reward += 10*(pi/6 - abs(self.delta_angle))     
         
         
-        
+        self.reward = 0
         if self.collision_bool:
-            self.reward = -100
-        rospy.logwarn("Ep: " +str(self.n_episode) +" Step: " +str(self.n_step) + " Reward: " + str(self.reward))
-        self.n_step += 1
+            self.reward=-100        
         return self.reward
         
     # Internal TaskEnv Methods
+    def get_variable(self, var_name):
+        return(vars(self).get(var_name))
+          
+    def shutdown_hook(self):
+        rospy.logwarn('Env shutdown')
+        self.info = 'user abort'

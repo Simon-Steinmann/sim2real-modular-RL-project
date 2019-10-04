@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/simon/sim2real/simulations/kinova/src
+CMAKE_SOURCE_DIR = /home/acis/sim2real/simulations/kinova/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/simon/sim2real/simulations/kinova/build
+CMAKE_BINARY_DIR = /home/acis/sim2real/simulations/kinova/build
 
 # Utility rule file for _run_tests_ml_using_tf_rostest.
 
@@ -63,10 +63,10 @@ ml_using_tf/CMakeFiles/_run_tests_ml_using_tf_rostest.dir/build: _run_tests_ml_u
 .PHONY : ml_using_tf/CMakeFiles/_run_tests_ml_using_tf_rostest.dir/build
 
 ml_using_tf/CMakeFiles/_run_tests_ml_using_tf_rostest.dir/clean:
-	cd /home/simon/sim2real/simulations/kinova/build/ml_using_tf && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_ml_using_tf_rostest.dir/cmake_clean.cmake
+	cd /home/acis/sim2real/simulations/kinova/build/ml_using_tf && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_ml_using_tf_rostest.dir/cmake_clean.cmake
 .PHONY : ml_using_tf/CMakeFiles/_run_tests_ml_using_tf_rostest.dir/clean
 
 ml_using_tf/CMakeFiles/_run_tests_ml_using_tf_rostest.dir/depend:
-	cd /home/simon/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/simon/sim2real/simulations/kinova/src /home/simon/sim2real/simulations/kinova/src/ml_using_tf /home/simon/sim2real/simulations/kinova/build /home/simon/sim2real/simulations/kinova/build/ml_using_tf /home/simon/sim2real/simulations/kinova/build/ml_using_tf/CMakeFiles/_run_tests_ml_using_tf_rostest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acis/sim2real/simulations/kinova/src /home/acis/sim2real/simulations/kinova/src/ml_using_tf /home/acis/sim2real/simulations/kinova/build /home/acis/sim2real/simulations/kinova/build/ml_using_tf /home/acis/sim2real/simulations/kinova/build/ml_using_tf/CMakeFiles/_run_tests_ml_using_tf_rostest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ml_using_tf/CMakeFiles/_run_tests_ml_using_tf_rostest.dir/depend
 

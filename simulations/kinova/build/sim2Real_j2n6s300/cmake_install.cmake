@@ -1,8 +1,8 @@
-# Install script for directory: /home/simon/sim2real/simulations/kinova/src/sim2Real_j2n6s300
+# Install script for directory: /home/acis/sim2real/simulations/kinova/src/sim2Real_j2n6s300
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/simon/sim2real/simulations/kinova/install")
+  set(CMAKE_INSTALL_PREFIX "/home/acis/sim2real/simulations/kinova/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,57 +38,57 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/j2n6s300_ml/msg" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/src/sim2Real_j2n6s300/msg/JointOdom.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/j2n6s300_ml/msg" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/src/sim2Real_j2n6s300/msg/JointOdom.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/j2n6s300_ml/srv" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/src/sim2Real_j2n6s300/srv/tfQuery.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/j2n6s300_ml/srv" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/src/sim2Real_j2n6s300/srv/tfQuery.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/j2n6s300_ml/cmake" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/build/sim2Real_j2n6s300/catkin_generated/installspace/j2n6s300_ml-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/j2n6s300_ml/cmake" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/build/sim2Real_j2n6s300/catkin_generated/installspace/j2n6s300_ml-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/simon/sim2real/simulations/kinova/devel/include/j2n6s300_ml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/acis/sim2real/simulations/kinova/devel/include/j2n6s300_ml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/simon/sim2real/simulations/kinova/devel/share/roseus/ros/j2n6s300_ml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/acis/sim2real/simulations/kinova/devel/share/roseus/ros/j2n6s300_ml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/simon/sim2real/simulations/kinova/devel/share/common-lisp/ros/j2n6s300_ml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/acis/sim2real/simulations/kinova/devel/share/common-lisp/ros/j2n6s300_ml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/simon/sim2real/simulations/kinova/devel/share/gennodejs/ros/j2n6s300_ml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/acis/sim2real/simulations/kinova/devel/share/gennodejs/ros/j2n6s300_ml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/simon/sim2real/simulations/kinova/devel/lib/python2.7/dist-packages/j2n6s300_ml")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/acis/sim2real/simulations/kinova/devel/lib/python2.7/dist-packages/j2n6s300_ml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/simon/sim2real/simulations/kinova/devel/lib/python2.7/dist-packages/j2n6s300_ml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/acis/sim2real/simulations/kinova/devel/lib/python2.7/dist-packages/j2n6s300_ml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/build/sim2Real_j2n6s300/catkin_generated/installspace/j2n6s300_ml.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/build/sim2Real_j2n6s300/catkin_generated/installspace/j2n6s300_ml.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/j2n6s300_ml/cmake" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/build/sim2Real_j2n6s300/catkin_generated/installspace/j2n6s300_ml-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/j2n6s300_ml/cmake" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/build/sim2Real_j2n6s300/catkin_generated/installspace/j2n6s300_ml-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/j2n6s300_ml/cmake" TYPE FILE FILES
-    "/home/simon/sim2real/simulations/kinova/build/sim2Real_j2n6s300/catkin_generated/installspace/j2n6s300_mlConfig.cmake"
-    "/home/simon/sim2real/simulations/kinova/build/sim2Real_j2n6s300/catkin_generated/installspace/j2n6s300_mlConfig-version.cmake"
+    "/home/acis/sim2real/simulations/kinova/build/sim2Real_j2n6s300/catkin_generated/installspace/j2n6s300_mlConfig.cmake"
+    "/home/acis/sim2real/simulations/kinova/build/sim2Real_j2n6s300/catkin_generated/installspace/j2n6s300_mlConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/j2n6s300_ml" TYPE FILE FILES "/home/simon/sim2real/simulations/kinova/src/sim2Real_j2n6s300/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/j2n6s300_ml" TYPE FILE FILES "/home/acis/sim2real/simulations/kinova/src/sim2Real_j2n6s300/package.xml")
 endif()
 

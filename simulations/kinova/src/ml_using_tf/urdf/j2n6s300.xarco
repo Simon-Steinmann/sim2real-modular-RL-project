@@ -58,7 +58,7 @@
   <link name="j2n6s300_link_base">
     <visual>
       <geometry>
-        <mesh filename="package://kinova_description/meshes/base.dae"/>
+        <mesh filename="/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_description/meshes/base.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>

@@ -143,6 +143,13 @@ j2n6s300:
       i: 0
       p: 5000
     type: effort_controllers/JointPositionController
+  joint_1_velocity_controller:
+    joint: j2n6s300_joint_1
+    pid:
+      d: 1.0
+      i: 0.5
+      p: 1000.0
+    type: effort_controllers/JointVelocityController
   joint_2_position_controller:
     joint: j2n6s300_joint_2
     pid:
@@ -150,6 +157,13 @@ j2n6s300:
       i: 0
       p: 5000
     type: effort_controllers/JointPositionController
+  joint_2_velocity_controller:
+    joint: j2n6s300_joint_2
+    pid:
+      d: 1.0
+      i: 0.5
+      p: 1000.0
+    type: effort_controllers/JointVelocityController
   joint_3_position_controller:
     joint: j2n6s300_joint_3
     pid:
@@ -157,6 +171,13 @@ j2n6s300:
       i: 0
       p: 5000
     type: effort_controllers/JointPositionController
+  joint_3_velocity_controller:
+    joint: j2n6s300_joint_3
+    pid:
+      d: 1.0
+      i: 0.5
+      p: 1000.0
+    type: effort_controllers/JointVelocityController
   joint_4_position_controller:
     joint: j2n6s300_joint_4
     pid:
@@ -164,6 +185,13 @@ j2n6s300:
       i: 0
       p: 500
     type: effort_controllers/JointPositionController
+  joint_4_velocity_controller:
+    joint: j2n6s300_joint_4
+    pid:
+      d: 1.0
+      i: 0.5
+      p: 1000.0
+    type: effort_controllers/JointVelocityController
   joint_5_position_controller:
     joint: j2n6s300_joint_5
     pid:
@@ -171,6 +199,13 @@ j2n6s300:
       i: 0
       p: 200
     type: effort_controllers/JointPositionController
+  joint_5_velocity_controller:
+    joint: j2n6s300_joint_5
+    pid:
+      d: 1.0
+      i: 0.5
+      p: 1000.0
+    type: effort_controllers/JointVelocityController
   joint_6_position_controller:
     joint: j2n6s300_joint_6
     pid:
@@ -178,6 +213,13 @@ j2n6s300:
       i: 0
       p: 500
     type: effort_controllers/JointPositionController
+  joint_6_velocity_controller:
+    joint: j2n6s300_joint_6
+    pid:
+      d: 1.0
+      i: 0.5
+      p: 1000.0
+    type: effort_controllers/JointVelocityController
   joint_state_controller:
     publish_rate: 50
     type: joint_state_controller/JointStateController

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/acis/sim2real/simulations/universal_robot/devel/setup.sh
