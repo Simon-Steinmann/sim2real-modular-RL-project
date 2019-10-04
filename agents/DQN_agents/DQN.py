@@ -19,7 +19,10 @@ class DQN(Base_Agent):
         self.q_network_optimizer = optim.Adam(self.q_network_local.parameters(),
                                               lr=self.hyperparameters["learning_rate"], eps=1e-4)
         self.exploration_strategy = Epsilon_Greedy_Exploration(config)
-
+        
+        self.play = config.load_model
+        if self.play: self.locally_load_policy()
+        
     def reset_game(self):
         super(DQN, self).reset_game()
         self.update_learning_rate(self.hyperparameters["learning_rate"], self.q_network_optimizer)
@@ -29,7 +32,7 @@ class DQN(Base_Agent):
         while not self.done:
             self.action = self.pick_action()
             self.conduct_action(self.action)
-            if self.time_for_q_network_to_learn():
+            if self.time_for_q_network_to_learn() and not self.play:
                 for _ in range(self.hyperparameters["learning_iterations"]):
                     self.learn()
             self.save_experience()
@@ -48,7 +51,7 @@ class DQN(Base_Agent):
         self.q_network_local.eval() #puts network in evaluation mode
         with torch.no_grad():
             action_values = self.q_network_local(state)
-        self.q_network_local.train() #puts network back in training mode
+        if not self.play: self.q_network_local.train() #puts network back in training mode
         action = self.exploration_strategy.perturb_action_for_exploration_purposes({"action_values": action_values,
                                                                                     "turn_off_exploration": self.turn_off_exploration,
                                                                                     "episode_number": self.episode_number})
@@ -103,6 +106,7 @@ class DQN(Base_Agent):
         """Loads the policy"""
         print("Loading Model")
         self.q_network_local.load_state_dict(torch.load(self.config.load_model_path))
+        self.q_network_local.eval()
 
     def time_for_q_network_to_learn(self):
         """Returns boolean indicating whether enough steps have been taken for learning to begin and there are

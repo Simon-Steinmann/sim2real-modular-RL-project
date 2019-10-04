@@ -9,13 +9,15 @@ class DDPG_HER(HER_Base, DDPG):
         DDPG.__init__(self, config)
         HER_Base.__init__(self, self.hyperparameters["Critic"]["buffer_size"], self.hyperparameters["batch_size"],
                           self.hyperparameters["HER_sample_proportion"])
-
+        
+        self.play = config.load_model
+        
     def step(self):
         """Runs a step within a game including a learning step if required"""
         while not self.done:
             self.action = self.pick_action()
             self.conduct_action_in_changeable_goal_envs(self.action)
-            if self.time_for_critic_and_actor_to_learn():
+            if self.time_for_critic_and_actor_to_learn() and not self.play:
                 for _ in range(self.hyperparameters["learning_updates_per_learning_session"]):
                     states, actions, rewards, next_states, dones = self.sample_from_HER_and_Ordinary_Buffer()  # Samples experiences from buffer
                     self.critic_learn(states, actions, rewards, next_states, dones)

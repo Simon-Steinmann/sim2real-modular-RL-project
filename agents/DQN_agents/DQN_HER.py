@@ -8,13 +8,14 @@ class DQN_HER(HER_Base, DQN):
         DQN.__init__(self, config)
         HER_Base.__init__(self, self.hyperparameters["buffer_size"], self.hyperparameters["batch_size"],
                           self.hyperparameters["HER_sample_proportion"])
-
+        self.play = config.load_model
+        
     def step(self):
         """Runs a step within a game including a learning step if required"""
         while not self.done:
             self.action = self.pick_action()
             self.conduct_action_in_changeable_goal_envs(self.action)
-            if self.time_for_q_network_to_learn():
+            if self.time_for_q_network_to_learn() and not self.play:
                 for _ in range(self.hyperparameters["learning_iterations"]):
                     self.learn(experiences=self.sample_from_HER_and_Ordinary_Buffer())
             self.track_changeable_goal_episodes_data()
