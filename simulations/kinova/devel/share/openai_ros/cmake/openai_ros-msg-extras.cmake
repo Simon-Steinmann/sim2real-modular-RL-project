@@ -1,2 +1,1 @@
-set(openai_ros_MESSAGE_FILES "/home/acis/sim2real/simulations/kinova/src/openai_ros/openai_ros/msg/RLExperimentInfo.msg")
-set(openai_ros_SERVICE_FILES "")
+/home/acis/sim2real/simulations/kinova/devel/.private/openai_ros/share/openai_ros/cmake/openai_ros-msg-extras.cmake

@@ -1,8 +1,1 @@
-prefix=/home/acis/sim2real/simulations/kinova/devel
-
-Name: j2s6s300_moveit_config
-Description: Description of j2s6s300_moveit_config
-Version: 0.3.0
-Cflags: 
-Libs: -L/home/acis/sim2real/simulations/kinova/devel/lib 
-Requires: 
+/home/acis/sim2real/simulations/kinova/devel/.private/j2s6s300_moveit_config/lib/pkgconfig/j2s6s300_moveit_config.pc

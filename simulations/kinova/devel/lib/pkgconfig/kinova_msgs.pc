@@ -1,8 +1,1 @@
-prefix=/home/acis/sim2real/simulations/kinova/devel
-
-Name: kinova_msgs
-Description: Description of kinova_msgs
-Version: 0.0.1
-Cflags: -I/home/acis/sim2real/simulations/kinova/devel/include
-Libs: -L/home/acis/sim2real/simulations/kinova/devel/lib 
-Requires: actionlib_msgs geometry_msgs message_runtime
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_msgs/lib/pkgconfig/kinova_msgs.pc

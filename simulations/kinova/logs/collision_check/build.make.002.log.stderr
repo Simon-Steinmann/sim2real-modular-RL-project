@@ -1,0 +1,11 @@
+In file included from [01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model_group.h:41:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model/robot_model.h:47[m[K,
+                 from [01m[K/opt/ros/melodic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/acis/sim2real/simulations/kinova/src/collision_check/src/planning_scene_tutorial.cpp:43[m[K:
+[01m[K/opt/ros/melodic/include/moveit/robot_model/joint_model.h:47:10:[m[K [01;31m[Kfatal error: [m[KEigen/Geometry: No such file or directory
+ #include [01;31m[K<Eigen/Geometry>[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/planning_scene_tutorial.dir/src/planning_scene_tutorial.cpp.o] Error 1
+make[1]: *** [CMakeFiles/planning_scene_tutorial.dir/all] Error 2
+make: *** [all] Error 2

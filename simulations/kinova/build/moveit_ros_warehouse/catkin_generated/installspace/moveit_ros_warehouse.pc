@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/install
+
+Name: moveit_ros_warehouse
+Description: Description of moveit_ros_warehouse
+Version: 1.0.1
+Cflags: -I/home/acis/sim2real/simulations/kinova/install/include
+Libs: -L/home/acis/sim2real/simulations/kinova/install/lib -lmoveit_warehouse
+Requires: moveit_ros_planning warehouse_ros

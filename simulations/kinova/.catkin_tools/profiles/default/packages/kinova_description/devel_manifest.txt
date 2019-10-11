@@ -1,0 +1,5 @@
+kinova-ros/kinova_description
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_description/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_description/lib/pkgconfig/kinova_description.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/kinova_description.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_description/share/kinova_description/cmake/kinova_descriptionConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_description/cmake/kinova_descriptionConfig.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_description/share/kinova_description/cmake/kinova_descriptionConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_description/cmake/kinova_descriptionConfig-version.cmake

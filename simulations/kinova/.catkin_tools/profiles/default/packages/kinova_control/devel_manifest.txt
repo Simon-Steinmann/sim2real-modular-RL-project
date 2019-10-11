@@ -1,0 +1,5 @@
+kinova-ros/kinova_control
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_control/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_control/lib/pkgconfig/kinova_control.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/kinova_control.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_control/share/kinova_control/cmake/kinova_controlConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_control/cmake/kinova_controlConfig.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_control/share/kinova_control/cmake/kinova_controlConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_control/cmake/kinova_controlConfig-version.cmake

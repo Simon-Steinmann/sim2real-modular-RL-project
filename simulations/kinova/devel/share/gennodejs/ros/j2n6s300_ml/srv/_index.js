@@ -1,8 +1,1 @@
-
-"use strict";
-
-let tfQuery = require('./tfQuery.js')
-
-module.exports = {
-  tfQuery: tfQuery,
-};
+/home/acis/sim2real/simulations/kinova/devel/.private/j2n6s300_ml/share/gennodejs/ros/j2n6s300_ml/srv/_index.js

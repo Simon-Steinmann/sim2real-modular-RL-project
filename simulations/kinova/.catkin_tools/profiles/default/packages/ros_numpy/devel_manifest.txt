@@ -1,0 +1,6 @@
+ros_numpy
+/home/acis/sim2real/simulations/kinova/devel/.private/ros_numpy/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/ros_numpy/lib/python2.7/dist-packages/ros_numpy/__init__.py /home/acis/sim2real/simulations/kinova/devel/lib/python2.7/dist-packages/ros_numpy/__init__.py
+/home/acis/sim2real/simulations/kinova/devel/.private/ros_numpy/lib/pkgconfig/ros_numpy.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/ros_numpy.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/ros_numpy/share/ros_numpy/cmake/ros_numpyConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/ros_numpy/cmake/ros_numpyConfig-version.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/ros_numpy/share/ros_numpy/cmake/ros_numpyConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/ros_numpy/cmake/ros_numpyConfig.cmake

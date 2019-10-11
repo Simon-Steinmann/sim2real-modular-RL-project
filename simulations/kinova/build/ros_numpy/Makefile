@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/acis/sim2real/simulations/kinova/src
+CMAKE_SOURCE_DIR = /home/acis/sim2real/simulations/kinova/src/ros_numpy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/acis/sim2real/simulations/kinova/build
+CMAKE_BINARY_DIR = /home/acis/sim2real/simulations/kinova/build/ros_numpy
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,17 +80,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -100,17 +89,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -123,6 +101,28 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target test
 test:
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/acis/sim2real/simulations/kinova/build/CMakeFiles /home/acis/sim2real/simulations/kinova/build/ros_numpy/CMakeFiles/progress.marks
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 ros_numpy/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/acis/sim2real/simulations/kinova/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acis/sim2real/simulations/kinova/build/ros_numpy/CMakeFiles /home/acis/sim2real/simulations/kinova/build/ros_numpy/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acis/sim2real/simulations/kinova/build/ros_numpy/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 ros_numpy/clean
+	$(MAKE) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -154,123 +154,239 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 ros_numpy/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 ros_numpy/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-ros_numpy/CMakeFiles/_run_tests_ros_numpy.dir/rule:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 ros_numpy/CMakeFiles/_run_tests_ros_numpy.dir/rule
-.PHONY : ros_numpy/CMakeFiles/_run_tests_ros_numpy.dir/rule
+#=============================================================================
+# Target rules for targets named doxygen
 
-# Convenience name for target.
-_run_tests_ros_numpy: ros_numpy/CMakeFiles/_run_tests_ros_numpy.dir/rule
-
-.PHONY : _run_tests_ros_numpy
+# Build rule for target.
+doxygen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doxygen
+.PHONY : doxygen
 
 # fast build rule for target.
-_run_tests_ros_numpy/fast:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f ros_numpy/CMakeFiles/_run_tests_ros_numpy.dir/build.make ros_numpy/CMakeFiles/_run_tests_ros_numpy.dir/build
-.PHONY : _run_tests_ros_numpy/fast
+doxygen/fast:
+	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
+.PHONY : doxygen/fast
 
-# Convenience name for target.
-ros_numpy/CMakeFiles/run_tests_ros_numpy.dir/rule:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 ros_numpy/CMakeFiles/run_tests_ros_numpy.dir/rule
-.PHONY : ros_numpy/CMakeFiles/run_tests_ros_numpy.dir/rule
+#=============================================================================
+# Target rules for targets named clean_test_results
 
-# Convenience name for target.
-run_tests_ros_numpy: ros_numpy/CMakeFiles/run_tests_ros_numpy.dir/rule
-
-.PHONY : run_tests_ros_numpy
+# Build rule for target.
+clean_test_results: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results
+.PHONY : clean_test_results
 
 # fast build rule for target.
-run_tests_ros_numpy/fast:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f ros_numpy/CMakeFiles/run_tests_ros_numpy.dir/build.make ros_numpy/CMakeFiles/run_tests_ros_numpy.dir/build
-.PHONY : run_tests_ros_numpy/fast
+clean_test_results/fast:
+	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
+.PHONY : clean_test_results/fast
 
-# Convenience name for target.
-ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests.dir/rule:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests.dir/rule
-.PHONY : ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests.dir/rule
+#=============================================================================
+# Target rules for targets named download_extra_data
 
-# Convenience name for target.
-run_tests_ros_numpy_nosetests: ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests.dir/rule
-
-.PHONY : run_tests_ros_numpy_nosetests
+# Build rule for target.
+download_extra_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
+.PHONY : download_extra_data
 
 # fast build rule for target.
-run_tests_ros_numpy_nosetests/fast:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests.dir/build.make ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests.dir/build
-.PHONY : run_tests_ros_numpy_nosetests/fast
+download_extra_data/fast:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
+.PHONY : download_extra_data/fast
 
-# Convenience name for target.
-ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/rule:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/rule
-.PHONY : ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/rule
+#=============================================================================
+# Target rules for targets named run_tests
 
-# Convenience name for target.
-clean_test_results_ros_numpy: ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/rule
-
-.PHONY : clean_test_results_ros_numpy
+# Build rule for target.
+run_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests
+.PHONY : run_tests
 
 # fast build rule for target.
-clean_test_results_ros_numpy/fast:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/build.make ros_numpy/CMakeFiles/clean_test_results_ros_numpy.dir/build
-.PHONY : clean_test_results_ros_numpy/fast
+run_tests/fast:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
 
-# Convenience name for target.
-ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests.dir/rule:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests.dir/rule
-.PHONY : ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests.dir/rule
+#=============================================================================
+# Target rules for targets named _run_tests_ros_numpy_nosetests
 
-# Convenience name for target.
-_run_tests_ros_numpy_nosetests: ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests.dir/rule
-
+# Build rule for target.
+_run_tests_ros_numpy_nosetests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ros_numpy_nosetests
 .PHONY : _run_tests_ros_numpy_nosetests
 
 # fast build rule for target.
 _run_tests_ros_numpy_nosetests/fast:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests.dir/build.make ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests.dir/build
+	$(MAKE) -f CMakeFiles/_run_tests_ros_numpy_nosetests.dir/build.make CMakeFiles/_run_tests_ros_numpy_nosetests.dir/build
 .PHONY : _run_tests_ros_numpy_nosetests/fast
 
-# Convenience name for target.
-ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests_test.dir/rule:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests_test.dir/rule
-.PHONY : ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests_test.dir/rule
+#=============================================================================
+# Target rules for targets named clean_test_results_ros_numpy
 
-# Convenience name for target.
-run_tests_ros_numpy_nosetests_test: ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests_test.dir/rule
+# Build rule for target.
+clean_test_results_ros_numpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_ros_numpy
+.PHONY : clean_test_results_ros_numpy
 
+# fast build rule for target.
+clean_test_results_ros_numpy/fast:
+	$(MAKE) -f CMakeFiles/clean_test_results_ros_numpy.dir/build.make CMakeFiles/clean_test_results_ros_numpy.dir/build
+.PHONY : clean_test_results_ros_numpy/fast
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_ros_numpy
+
+# Build rule for target.
+run_tests_ros_numpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ros_numpy
+.PHONY : run_tests_ros_numpy
+
+# fast build rule for target.
+run_tests_ros_numpy/fast:
+	$(MAKE) -f CMakeFiles/run_tests_ros_numpy.dir/build.make CMakeFiles/run_tests_ros_numpy.dir/build
+.PHONY : run_tests_ros_numpy/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_ros_numpy
+
+# Build rule for target.
+_run_tests_ros_numpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ros_numpy
+.PHONY : _run_tests_ros_numpy
+
+# fast build rule for target.
+_run_tests_ros_numpy/fast:
+	$(MAKE) -f CMakeFiles/_run_tests_ros_numpy.dir/build.make CMakeFiles/_run_tests_ros_numpy.dir/build
+.PHONY : _run_tests_ros_numpy/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_ros_numpy_nosetests
+
+# Build rule for target.
+run_tests_ros_numpy_nosetests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ros_numpy_nosetests
+.PHONY : run_tests_ros_numpy_nosetests
+
+# fast build rule for target.
+run_tests_ros_numpy_nosetests/fast:
+	$(MAKE) -f CMakeFiles/run_tests_ros_numpy_nosetests.dir/build.make CMakeFiles/run_tests_ros_numpy_nosetests.dir/build
+.PHONY : run_tests_ros_numpy_nosetests/fast
+
+#=============================================================================
+# Target rules for targets named _catkin_empty_exported_target
+
+# Build rule for target.
+_catkin_empty_exported_target: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
+.PHONY : _catkin_empty_exported_target
+
+# fast build rule for target.
+_catkin_empty_exported_target/fast:
+	$(MAKE) -f CMakeFiles/_catkin_empty_exported_target.dir/build.make CMakeFiles/_catkin_empty_exported_target.dir/build
+.PHONY : _catkin_empty_exported_target/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_ros_numpy_nosetests_test
+
+# Build rule for target.
+run_tests_ros_numpy_nosetests_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ros_numpy_nosetests_test
 .PHONY : run_tests_ros_numpy_nosetests_test
 
 # fast build rule for target.
 run_tests_ros_numpy_nosetests_test/fast:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests_test.dir/build.make ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests_test.dir/build
+	$(MAKE) -f CMakeFiles/run_tests_ros_numpy_nosetests_test.dir/build.make CMakeFiles/run_tests_ros_numpy_nosetests_test.dir/build
 .PHONY : run_tests_ros_numpy_nosetests_test/fast
 
-# Convenience name for target.
-ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests_test.dir/rule:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f CMakeFiles/Makefile2 ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests_test.dir/rule
-.PHONY : ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests_test.dir/rule
+#=============================================================================
+# Target rules for targets named _run_tests_ros_numpy_nosetests_test
 
-# Convenience name for target.
-_run_tests_ros_numpy_nosetests_test: ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests_test.dir/rule
-
+# Build rule for target.
+_run_tests_ros_numpy_nosetests_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ros_numpy_nosetests_test
 .PHONY : _run_tests_ros_numpy_nosetests_test
 
 # fast build rule for target.
 _run_tests_ros_numpy_nosetests_test/fast:
-	cd /home/acis/sim2real/simulations/kinova/build && $(MAKE) -f ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests_test.dir/build.make ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests_test.dir/build
+	$(MAKE) -f CMakeFiles/_run_tests_ros_numpy_nosetests_test.dir/build.make CMakeFiles/_run_tests_ros_numpy_nosetests_test.dir/build
 .PHONY : _run_tests_ros_numpy_nosetests_test/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
 # Help Target
 help:
@@ -280,18 +396,28 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
-	@echo "... rebuild_cache"
 	@echo "... list_install_components"
-	@echo "... _run_tests_ros_numpy"
-	@echo "... run_tests_ros_numpy"
-	@echo "... run_tests_ros_numpy_nosetests"
-	@echo "... edit_cache"
-	@echo "... clean_test_results_ros_numpy"
-	@echo "... _run_tests_ros_numpy_nosetests"
 	@echo "... install/local"
-	@echo "... test"
+	@echo "... doxygen"
+	@echo "... clean_test_results"
+	@echo "... download_extra_data"
+	@echo "... run_tests"
+	@echo "... rebuild_cache"
+	@echo "... _run_tests_ros_numpy_nosetests"
+	@echo "... clean_test_results_ros_numpy"
+	@echo "... edit_cache"
+	@echo "... tests"
+	@echo "... run_tests_ros_numpy"
+	@echo "... _run_tests_ros_numpy"
+	@echo "... run_tests_ros_numpy_nosetests"
+	@echo "... _catkin_empty_exported_target"
 	@echo "... run_tests_ros_numpy_nosetests_test"
+	@echo "... test"
 	@echo "... _run_tests_ros_numpy_nosetests_test"
+	@echo "... gmock_main"
+	@echo "... gmock"
+	@echo "... gtest_main"
+	@echo "... gtest"
 .PHONY : help
 
 
@@ -303,6 +429,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/acis/sim2real/simulations/kinova/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

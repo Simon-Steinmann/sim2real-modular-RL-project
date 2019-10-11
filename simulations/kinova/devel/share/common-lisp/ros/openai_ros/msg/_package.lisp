@@ -1,7 +1,1 @@
-(cl:defpackage openai_ros-msg
-  (:use )
-  (:export
-   "<RLEXPERIMENTINFO>"
-   "RLEXPERIMENTINFO"
-  ))
-
+/home/acis/sim2real/simulations/kinova/devel/.private/openai_ros/share/common-lisp/ros/openai_ros/msg/_package.lisp

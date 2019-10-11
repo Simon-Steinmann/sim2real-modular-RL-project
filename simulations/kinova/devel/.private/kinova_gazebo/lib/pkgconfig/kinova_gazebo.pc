@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/devel/.private/kinova_gazebo
+
+Name: kinova_gazebo
+Description: Description of kinova_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/acis/sim2real/simulations/kinova/devel/.private/kinova_gazebo/lib 
+Requires: 

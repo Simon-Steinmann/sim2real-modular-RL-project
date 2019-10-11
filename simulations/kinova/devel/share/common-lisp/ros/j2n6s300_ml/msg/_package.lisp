@@ -1,7 +1,1 @@
-(cl:defpackage j2n6s300_ml-msg
-  (:use )
-  (:export
-   "<JOINTODOM>"
-   "JOINTODOM"
-  ))
-
+/home/acis/sim2real/simulations/kinova/devel/.private/j2n6s300_ml/share/common-lisp/ros/j2n6s300_ml/msg/_package.lisp

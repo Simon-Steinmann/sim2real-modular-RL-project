@@ -1,0 +1,1 @@
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_kinematics/share/moveit_kinematics/cmake/moveit_kinematicsConfig.cmake

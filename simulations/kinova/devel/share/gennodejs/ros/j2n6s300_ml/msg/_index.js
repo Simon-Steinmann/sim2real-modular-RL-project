@@ -1,8 +1,1 @@
-
-"use strict";
-
-let JointOdom = require('./JointOdom.js');
-
-module.exports = {
-  JointOdom: JointOdom,
-};
+/home/acis/sim2real/simulations/kinova/devel/.private/j2n6s300_ml/share/gennodejs/ros/j2n6s300_ml/msg/_index.js

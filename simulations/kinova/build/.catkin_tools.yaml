@@ -1,0 +1,6 @@
+devel_space: /home/acis/sim2real/simulations/kinova/devel
+install: false
+install_space: /home/acis/sim2real/simulations/kinova/install
+profile: default
+source_space: /home/acis/sim2real/simulations/kinova/src
+workspace: /home/acis/sim2real/simulations/kinova

@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/install
+
+Name: moveit_planners_ompl
+Description: Description of moveit_planners_ompl
+Version: 1.0.1
+Cflags: -I/home/acis/sim2real/simulations/kinova/install/include -I/opt/ros/melodic/include/ompl-1.4
+Libs: -L/home/acis/sim2real/simulations/kinova/install/lib -lmoveit_ompl_interface /opt/ros/melodic/lib/libompl.so
+Requires: moveit_core

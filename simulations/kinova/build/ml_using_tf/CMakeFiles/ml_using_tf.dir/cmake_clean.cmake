@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ml_using_tf.dir/src/joint_state_listener.cpp.o"
-  "/home/acis/sim2real/simulations/kinova/devel/lib/ml_using_tf/ml_using_tf.pdb"
-  "/home/acis/sim2real/simulations/kinova/devel/lib/ml_using_tf/ml_using_tf"
+  "/home/acis/sim2real/simulations/kinova/devel/.private/ml_using_tf/lib/ml_using_tf/ml_using_tf.pdb"
+  "/home/acis/sim2real/simulations/kinova/devel/.private/ml_using_tf/lib/ml_using_tf/ml_using_tf"
 )
 
 # Per-language clean rules from dependency scanning.

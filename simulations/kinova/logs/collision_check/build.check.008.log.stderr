@@ -1,0 +1,18 @@
+[33m[1mCMake Warning[0m at /opt/ros/melodic/share/catkin/cmake/catkin_package.cmake:166 (message):
+  catkin_package() DEPENDS on 'EIGEN3' but neither 'EIGEN3_INCLUDE_DIRS' nor
+  'EIGEN3_LIBRARIES' is defined.
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/melodic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
+  CMakeLists.txt:31 (catkin_package)
+
+
+[31m[1mCMake Error[0m at /opt/ros/melodic/share/catkin/cmake/catkin_package.cmake:196 (message):
+  catkin_package() the catkin package 'moveit_core' has been
+  find_package()-ed but is not listed as a build dependency in the
+  package.xml
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/melodic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
+  CMakeLists.txt:31 (catkin_package)
+
+
+make: *** [cmake_check_build_system] Error 1

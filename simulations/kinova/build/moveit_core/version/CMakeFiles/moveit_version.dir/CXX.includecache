@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_core/include/moveit/version.h
+
+/home/acis/sim2real/simulations/kinova/src/moveit/moveit_core/version/version.cpp
+moveit/version.h
+-
+cstdio
+-
+

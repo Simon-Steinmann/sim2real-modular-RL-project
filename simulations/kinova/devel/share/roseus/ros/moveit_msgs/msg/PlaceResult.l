@@ -1,0 +1,1 @@
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_msgs/share/roseus/ros/moveit_msgs/msg/PlaceResult.l

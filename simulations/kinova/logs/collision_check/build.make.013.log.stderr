@@ -1,0 +1,10 @@
+[01m[K/home/acis/sim2real/simulations/kinova/src/collision_check/src/planning_scene_tutorial.cpp:[m[K In function ‘[01m[Kbool service_callback(collision_check::CheckJointStateCollision::Request&, collision_check::CheckJointStateCollision::Response&)[m[K’:
+[01m[K/home/acis/sim2real/simulations/kinova/src/collision_check/src/planning_scene_tutorial.cpp:22:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kcollision_request[m[K’ does not name a type
+   static [01;31m[Kcollision_request[m[K.contacts = true;
+          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/collision_check/src/planning_scene_tutorial.cpp:23:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kcollision_request[m[K’ does not name a type
+   static [01;31m[Kcollision_request[m[K.max_contacts = 1000;
+          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/planning_scene_tutorial.dir/src/planning_scene_tutorial.cpp.o] Error 1
+make[1]: *** [CMakeFiles/planning_scene_tutorial.dir/all] Error 2
+make: *** [all] Error 2

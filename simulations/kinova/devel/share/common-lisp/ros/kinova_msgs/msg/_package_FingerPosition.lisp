@@ -1,8 +1,1 @@
-(cl:in-package kinova_msgs-msg)
-(cl:export '(FINGER1-VAL
-          FINGER1
-          FINGER2-VAL
-          FINGER2
-          FINGER3-VAL
-          FINGER3
-))
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_msgs/share/common-lisp/ros/kinova_msgs/msg/_package_FingerPosition.lisp

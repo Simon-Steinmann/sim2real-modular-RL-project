@@ -1,6 +1,1 @@
-(cl:in-package j2n6s300_ml-srv)
-(cl:export '(SUCCESS-VAL
-          SUCCESS
-          JOINT_COORDINATES-VAL
-          JOINT_COORDINATES
-))
+/home/acis/sim2real/simulations/kinova/devel/.private/j2n6s300_ml/share/common-lisp/ros/j2n6s300_ml/srv/_package_tfQuery.lisp

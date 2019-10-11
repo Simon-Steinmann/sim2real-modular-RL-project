@@ -1,0 +1,5 @@
+kinova-ros/kinova_gazebo
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_gazebo/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_gazebo/lib/pkgconfig/kinova_gazebo.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/kinova_gazebo.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_gazebo/share/kinova_gazebo/cmake/kinova_gazeboConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_gazebo/cmake/kinova_gazeboConfig-version.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_gazebo/share/kinova_gazebo/cmake/kinova_gazeboConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_gazebo/cmake/kinova_gazeboConfig.cmake

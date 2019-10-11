@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/install
+
+Name: chomp_motion_planner
+Description: Description of chomp_motion_planner
+Version: 1.0.1
+Cflags: -I/home/acis/sim2real/simulations/kinova/install/include
+Libs: -L/home/acis/sim2real/simulations/kinova/install/lib -lchomp_motion_planner
+Requires: 

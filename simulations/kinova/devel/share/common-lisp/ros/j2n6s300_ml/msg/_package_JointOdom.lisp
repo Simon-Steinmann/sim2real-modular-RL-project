@@ -1,12 +1,1 @@
-(cl:in-package j2n6s300_ml-msg)
-(cl:export '(HEADER-VAL
-          HEADER
-          NAMES-VAL
-          NAMES
-          POSES-VAL
-          POSES
-          TWIST-VAL
-          TWIST
-          VELOCITY-VAL
-          VELOCITY
-))
+/home/acis/sim2real/simulations/kinova/devel/.private/j2n6s300_ml/share/common-lisp/ros/j2n6s300_ml/msg/_package_JointOdom.lisp

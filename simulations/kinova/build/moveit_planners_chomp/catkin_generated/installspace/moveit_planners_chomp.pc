@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/install
+
+Name: moveit_planners_chomp
+Description: Description of moveit_planners_chomp
+Version: 1.0.1
+Cflags: -I/home/acis/sim2real/simulations/kinova/install/include
+Libs: -L/home/acis/sim2real/simulations/kinova/install/lib -lmoveit_planners_chomp
+Requires: roscpp moveit_core pluginlib

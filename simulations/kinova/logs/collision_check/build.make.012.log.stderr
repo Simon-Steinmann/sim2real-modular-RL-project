@@ -1,0 +1,10 @@
+[01m[K/home/acis/sim2real/simulations/kinova/src/collision_check/src/planning_scene_tutorial.cpp:11:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K/[m[K’ token
+ [01;31m[K/[m[K Service
+ [01;31m[K^[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/collision_check/src/planning_scene_tutorial.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/acis/sim2real/simulations/kinova/src/collision_check/src/planning_scene_tutorial.cpp:49:81:[m[K [01;31m[Kerror: [m[K‘[01m[Kservice_callback[m[K’ was not declared in this scope
+   ros::ServiceServer service = n.advertiseService("z_service_GetStateValidity", [01;31m[Kservice_callback[m[K);
+                                                                                 [01;31m[K^~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/planning_scene_tutorial.dir/src/planning_scene_tutorial.cpp.o] Error 1
+make[1]: *** [CMakeFiles/planning_scene_tutorial.dir/all] Error 2
+make: *** [all] Error 2

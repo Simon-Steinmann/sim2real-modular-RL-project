@@ -1,8 +1,1 @@
-prefix=/home/acis/sim2real/simulations/kinova/devel
-
-Name: j2n6s300_ml
-Description: Description of j2n6s300_ml
-Version: 0.0.0
-Cflags: -I/home/acis/sim2real/simulations/kinova/devel/include
-Libs: -L/home/acis/sim2real/simulations/kinova/devel/lib 
-Requires: rospy
+/home/acis/sim2real/simulations/kinova/devel/.private/j2n6s300_ml/lib/pkgconfig/j2n6s300_ml.pc

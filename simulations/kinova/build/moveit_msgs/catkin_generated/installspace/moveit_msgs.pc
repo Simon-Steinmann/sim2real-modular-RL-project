@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/install
+
+Name: moveit_msgs
+Description: Description of moveit_msgs
+Version: 0.10.0
+Cflags: -I/home/acis/sim2real/simulations/kinova/install/include
+Libs: -L/home/acis/sim2real/simulations/kinova/install/lib 
+Requires: message_runtime std_msgs actionlib_msgs sensor_msgs geometry_msgs trajectory_msgs shape_msgs object_recognition_msgs octomap_msgs

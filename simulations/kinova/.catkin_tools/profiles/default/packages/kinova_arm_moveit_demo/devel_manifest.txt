@@ -1,0 +1,9 @@
+kinova-ros/kinova_moveit/kinova_arm_moveit_demo
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_arm_moveit_demo/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_arm_moveit_demo/lib/kinova_arm_moveit_demo/pick_place /home/acis/sim2real/simulations/kinova/devel/lib/kinova_arm_moveit_demo/pick_place
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_arm_moveit_demo/lib/kinova_arm_moveit_demo/work_scene /home/acis/sim2real/simulations/kinova/devel/lib/kinova_arm_moveit_demo/work_scene
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_arm_moveit_demo/lib/kinova_arm_moveit_demo/motion_plan /home/acis/sim2real/simulations/kinova/devel/lib/kinova_arm_moveit_demo/motion_plan
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_arm_moveit_demo/lib/kinova_arm_moveit_demo/test_accuracy /home/acis/sim2real/simulations/kinova/devel/lib/kinova_arm_moveit_demo/test_accuracy
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_arm_moveit_demo/lib/pkgconfig/kinova_arm_moveit_demo.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/kinova_arm_moveit_demo.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_arm_moveit_demo/share/kinova_arm_moveit_demo/cmake/kinova_arm_moveit_demoConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_arm_moveit_demo/cmake/kinova_arm_moveit_demoConfig-version.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_arm_moveit_demo/share/kinova_arm_moveit_demo/cmake/kinova_arm_moveit_demoConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_arm_moveit_demo/cmake/kinova_arm_moveit_demoConfig.cmake

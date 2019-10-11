@@ -1,8 +1,1 @@
-prefix=/home/acis/sim2real/simulations/kinova/devel
-
-Name: j2s7s300_ikfast
-Description: Description of j2s7s300_ikfast
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/acis/sim2real/simulations/kinova/devel/lib 
-Requires: moveit_core pluginlib roscpp tf_conversions
+/home/acis/sim2real/simulations/kinova/devel/.private/j2s7s300_ikfast/lib/pkgconfig/j2s7s300_ikfast.pc

@@ -23,8 +23,8 @@ echo_and_run mkdir -p "$DESTDIR/home/acis/sim2real/simulations/kinova/install/li
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/home/acis/sim2real/simulations/kinova/install/lib/python2.7/dist-packages:/home/acis/sim2real/simulations/kinova/build/lib/python2.7/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/acis/sim2real/simulations/kinova/build" \
+    PYTHONPATH="/home/acis/sim2real/simulations/kinova/install/lib/python2.7/dist-packages:/home/acis/sim2real/simulations/kinova/build/ros_numpy/lib/python2.7/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/acis/sim2real/simulations/kinova/build/ros_numpy" \
     "/usr/bin/python2" \
     "/home/acis/sim2real/simulations/kinova/src/ros_numpy/setup.py" \
     build --build-base "/home/acis/sim2real/simulations/kinova/build/ros_numpy" \

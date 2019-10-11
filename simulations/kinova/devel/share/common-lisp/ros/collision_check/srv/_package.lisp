@@ -1,0 +1,1 @@
+/home/acis/sim2real/simulations/kinova/devel/.private/collision_check/share/common-lisp/ros/collision_check/srv/_package.lisp

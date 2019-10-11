@@ -1,4 +1,1 @@
-(cl:in-package kinova_msgs-srv)
-(cl:export '(STOP_RESULT-VAL
-          STOP_RESULT
-))
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_msgs/share/common-lisp/ros/kinova_msgs/srv/_package_Stop.lisp

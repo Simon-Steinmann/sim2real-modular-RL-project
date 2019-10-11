@@ -1,0 +1,6 @@
+geometric_shapes
+/home/acis/sim2real/simulations/kinova/devel/.private/geometric_shapes/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/geometric_shapes/lib/libgeometric_shapes.so /home/acis/sim2real/simulations/kinova/devel/lib/libgeometric_shapes.so
+/home/acis/sim2real/simulations/kinova/devel/.private/geometric_shapes/lib/pkgconfig/geometric_shapes.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/geometric_shapes.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/geometric_shapes/share/geometric_shapes/cmake/geometric_shapesConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/geometric_shapes/cmake/geometric_shapesConfig.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/geometric_shapes/share/geometric_shapes/cmake/geometric_shapesConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/geometric_shapes/cmake/geometric_shapesConfig-version.cmake

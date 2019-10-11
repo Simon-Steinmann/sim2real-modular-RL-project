@@ -1,10 +1,1 @@
-(cl:defpackage j2n6s300_ml-srv
-  (:use )
-  (:export
-   "TFQUERY"
-   "<TFQUERY-REQUEST>"
-   "TFQUERY-REQUEST"
-   "<TFQUERY-RESPONSE>"
-   "TFQUERY-RESPONSE"
-  ))
-
+/home/acis/sim2real/simulations/kinova/devel/.private/j2n6s300_ml/share/common-lisp/ros/j2n6s300_ml/srv/_package.lisp

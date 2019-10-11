@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant
+
+Name: moveit_setup_assistant
+Description: Description of moveit_setup_assistant
+Version: 1.0.1
+Cflags: -I/home/acis/sim2real/simulations/kinova/src/moveit/moveit_setup_assistant/include
+Libs: -L/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant/lib -lmoveit_setup_assistant_tools
+Requires: moveit_ros_planning moveit_ros_visualization

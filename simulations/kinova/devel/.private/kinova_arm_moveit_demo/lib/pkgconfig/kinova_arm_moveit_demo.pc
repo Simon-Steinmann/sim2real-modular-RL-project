@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/devel/.private/kinova_arm_moveit_demo
+
+Name: kinova_arm_moveit_demo
+Description: Description of kinova_arm_moveit_demo
+Version: 0.6.3
+Cflags: -I/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/include
+Libs: -L/home/acis/sim2real/simulations/kinova/devel/.private/kinova_arm_moveit_demo/lib 
+Requires: moveit_core moveit_ros_planning_interface interactive_markers eigen_conversions

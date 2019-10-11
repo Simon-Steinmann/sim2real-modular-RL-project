@@ -68,7 +68,7 @@ set(ros_numpy_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(ros_numpy_SOURCE_PREFIX /home/acis/sim2real/simulations/kinova/src/ros_numpy)
-  set(ros_numpy_DEVEL_PREFIX /home/acis/sim2real/simulations/kinova/devel)
+  set(ros_numpy_DEVEL_PREFIX /home/acis/sim2real/simulations/kinova/devel/.private/ros_numpy)
   set(ros_numpy_INSTALL_PREFIX "")
   set(ros_numpy_PREFIX ${ros_numpy_DEVEL_PREFIX})
 else()

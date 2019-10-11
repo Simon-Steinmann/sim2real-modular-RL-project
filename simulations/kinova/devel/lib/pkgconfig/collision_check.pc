@@ -1,0 +1,1 @@
+/home/acis/sim2real/simulations/kinova/devel/.private/collision_check/lib/pkgconfig/collision_check.pc

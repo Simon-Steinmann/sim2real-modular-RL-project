@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/devel/.private/kinova_bringup
+
+Name: kinova_bringup
+Description: Description of kinova_bringup
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/acis/sim2real/simulations/kinova/devel/.private/kinova_bringup/lib 
+Requires: 

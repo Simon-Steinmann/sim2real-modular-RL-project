@@ -1,0 +1,6 @@
+kinova-ros/kinova_plugin
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_plugin/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_plugin/lib/libkinova_plugin.so /home/acis/sim2real/simulations/kinova/devel/lib/libkinova_plugin.so
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_plugin/lib/pkgconfig/kinova_plugin.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/kinova_plugin.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_plugin/share/kinova_plugin/cmake/kinova_pluginConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_plugin/cmake/kinova_pluginConfig.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_plugin/share/kinova_plugin/cmake/kinova_pluginConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_plugin/cmake/kinova_pluginConfig-version.cmake

@@ -86,8 +86,14 @@ PickPlace::PickPlace(ros::NodeHandle &nh):
 
     // pick process
     result_ = false;
-    my_pick();
+    while (ros::ok())
+    {
+      check_collision();
+    }
+    //check_collision();
+    // my_pick();
 }
+
 
 
 PickPlace::~PickPlace()
@@ -408,6 +414,7 @@ void PickPlace::check_collision()
     ROS_INFO_STREAM("Test 5: Current state is "
                     << (collision_result.collision ? "in" : "not in")
                     << " collision");
+
 }
 
 
@@ -905,13 +912,20 @@ void PickPlace::getInvK(geometry_msgs::Pose &eef_pose, std::vector<double> &join
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "pick_place_demo");
+    ros::init(argc, argv, "pick_place_demo1");
     ros::NodeHandle node;
-    ros::AsyncSpinner spinner(1);
-    spinner.start();
+    //kinova::PickPlace pick_place(node);
+    //ros::AsyncSpinner spinner(1);
+    //spinner.start();
+    
+    while (ros::ok())
+    {
+      kinova::PickPlace pick_place(node);
+    }
 
-    kinova::PickPlace pick_place(node);
+    
+    
 
-    ros::spin();
+    //ros::spin();
     return 0;
 }

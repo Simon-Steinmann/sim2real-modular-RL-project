@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/devel/.private/moveit_visual_tools
+
+Name: moveit_visual_tools
+Description: Description of moveit_visual_tools
+Version: 3.5.2
+Cflags: -I/home/acis/sim2real/simulations/kinova/src/moveit_visual_tools/include
+Libs: -L/home/acis/sim2real/simulations/kinova/devel/.private/moveit_visual_tools/lib -lmoveit_visual_tools
+Requires: rviz_visual_tools moveit_ros_planning moveit_core geometry_msgs visualization_msgs graph_msgs std_msgs trajectory_msgs

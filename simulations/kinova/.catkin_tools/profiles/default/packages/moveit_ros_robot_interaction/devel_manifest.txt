@@ -1,0 +1,7 @@
+moveit/moveit_ros/robot_interaction
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_ros_robot_interaction/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_ros_robot_interaction/lib/libmoveit_robot_interaction.so /home/acis/sim2real/simulations/kinova/devel/lib/libmoveit_robot_interaction.so
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_ros_robot_interaction/lib/libmoveit_robot_interaction.so.1.0.1 /home/acis/sim2real/simulations/kinova/devel/lib/libmoveit_robot_interaction.so.1.0.1
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_ros_robot_interaction/lib/pkgconfig/moveit_ros_robot_interaction.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/moveit_ros_robot_interaction.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_ros_robot_interaction/share/moveit_ros_robot_interaction/cmake/moveit_ros_robot_interactionConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/moveit_ros_robot_interaction/cmake/moveit_ros_robot_interactionConfig.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_ros_robot_interaction/share/moveit_ros_robot_interaction/cmake/moveit_ros_robot_interactionConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/moveit_ros_robot_interaction/cmake/moveit_ros_robot_interactionConfig-version.cmake

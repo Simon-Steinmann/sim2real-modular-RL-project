@@ -1,14 +1,1 @@
-(cl:in-package kinova_msgs-msg)
-(cl:export '(TWIST_LINEAR_X-VAL
-          TWIST_LINEAR_X
-          TWIST_LINEAR_Y-VAL
-          TWIST_LINEAR_Y
-          TWIST_LINEAR_Z-VAL
-          TWIST_LINEAR_Z
-          TWIST_ANGULAR_X-VAL
-          TWIST_ANGULAR_X
-          TWIST_ANGULAR_Y-VAL
-          TWIST_ANGULAR_Y
-          TWIST_ANGULAR_Z-VAL
-          TWIST_ANGULAR_Z
-))
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_msgs/share/common-lisp/ros/kinova_msgs/msg/_package_PoseVelocity.lisp

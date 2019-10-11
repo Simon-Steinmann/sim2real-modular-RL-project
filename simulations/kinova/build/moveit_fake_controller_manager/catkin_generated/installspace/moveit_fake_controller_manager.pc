@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/install
+
+Name: moveit_fake_controller_manager
+Description: Description of moveit_fake_controller_manager
+Version: 1.0.1
+Cflags: 
+Libs: -L/home/acis/sim2real/simulations/kinova/install/lib 
+Requires: moveit_core moveit_ros_planning

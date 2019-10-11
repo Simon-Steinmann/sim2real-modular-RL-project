@@ -1,0 +1,5 @@
+kinova-ros/kinova_bringup
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_bringup/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_bringup/lib/pkgconfig/kinova_bringup.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/kinova_bringup.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_bringup/share/kinova_bringup/cmake/kinova_bringupConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_bringup/cmake/kinova_bringupConfig.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_bringup/share/kinova_bringup/cmake/kinova_bringupConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_bringup/cmake/kinova_bringupConfig-version.cmake

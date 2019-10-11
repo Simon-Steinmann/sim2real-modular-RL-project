@@ -1,0 +1,6 @@
+kinova-ros/kinova_demo
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_demo/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_demo/lib/python2.7/dist-packages/kinova_demo/__init__.py /home/acis/sim2real/simulations/kinova/devel/lib/python2.7/dist-packages/kinova_demo/__init__.py
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_demo/lib/pkgconfig/kinova_demo.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/kinova_demo.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_demo/share/kinova_demo/cmake/kinova_demoConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_demo/cmake/kinova_demoConfig-version.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_demo/share/kinova_demo/cmake/kinova_demoConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/kinova_demo/cmake/kinova_demoConfig.cmake

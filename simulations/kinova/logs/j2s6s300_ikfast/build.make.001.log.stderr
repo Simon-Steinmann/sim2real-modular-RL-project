@@ -1,0 +1,79 @@
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:[m[K In member function ‘[01m[Kvirtual bool ikfast_kinematics_plugin::IKFastKinematicsPlugin::initialize(const string&, const string&, const string&, const string&, double)[m[K’:
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:343:86:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual void kinematics::KinematicsBase::setValues(const string&, const string&, const string&, const string&, double)[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+   setValues(robot_description, group_name, base_name, tip_name, search_discretization[01;35m[K)[m[K;
+                                                                                      [01;35m[K^[m[K
+In file included from [01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:50:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:339:34:[m[K [01;36m[Knote: [m[Kdeclared here
+   MOVEIT_DEPRECATED virtual void [01;36m[KsetValues[m[K(const std::string& robot_description, const std::string& group_name,
+                                  [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:[m[K In member function ‘[01m[Kvirtual bool ikfast_kinematics_plugin::IKFastKinematicsPlugin::searchPositionIK(const Pose&, const std::vector<double>&, double, const std::vector<double>&, std::vector<double>&, const IKCallbackFn&, moveit_msgs::MoveItErrorCodes&, const kinematics::KinematicsQueryOptions&) const[m[K’:
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:980:67:[m[K [01;35m[Kwarning: [m[K‘[01m[Kkinematics::KinematicsBase::search_discretization_[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+     num_positive_increments = (int)((max_limit - initial_guess) / [01;35m[Ksearch_discretization_[m[K);
+                                                                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:50:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:592:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   MOVEIT_DEPRECATED double [01;36m[Ksearch_discretization_[m[K;
+                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:980:67:[m[K [01;35m[Kwarning: [m[K‘[01m[Kkinematics::KinematicsBase::search_discretization_[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+     num_positive_increments = (int)((max_limit - initial_guess) / [01;35m[Ksearch_discretization_[m[K);
+                                                                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:50:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:592:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   MOVEIT_DEPRECATED double [01;36m[Ksearch_discretization_[m[K;
+                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:981:67:[m[K [01;35m[Kwarning: [m[K‘[01m[Kkinematics::KinematicsBase::search_discretization_[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+     num_negative_increments = (int)((initial_guess - min_limit) / [01;35m[Ksearch_discretization_[m[K);
+                                                                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:50:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:592:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   MOVEIT_DEPRECATED double [01;36m[Ksearch_discretization_[m[K;
+                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:981:67:[m[K [01;35m[Kwarning: [m[K‘[01m[Kkinematics::KinematicsBase::search_discretization_[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+     num_negative_increments = (int)((initial_guess - min_limit) / [01;35m[Ksearch_discretization_[m[K);
+                                                                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:50:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:592:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   MOVEIT_DEPRECATED double [01;36m[Ksearch_discretization_[m[K;
+                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:985:86:[m[K [01;35m[Kwarning: [m[K‘[01m[Kkinematics::KinematicsBase::search_discretization_[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+     num_positive_increments = (joint_max_vector_[free_params_[0]] - initial_guess) / [01;35m[Ksearch_discretization_[m[K;
+                                                                                      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:50:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:592:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   MOVEIT_DEPRECATED double [01;36m[Ksearch_discretization_[m[K;
+                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:985:86:[m[K [01;35m[Kwarning: [m[K‘[01m[Kkinematics::KinematicsBase::search_discretization_[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+     num_positive_increments = (joint_max_vector_[free_params_[0]] - initial_guess) / [01;35m[Ksearch_discretization_[m[K;
+                                                                                      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:50:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:592:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   MOVEIT_DEPRECATED double [01;36m[Ksearch_discretization_[m[K;
+                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:986:86:[m[K [01;35m[Kwarning: [m[K‘[01m[Kkinematics::KinematicsBase::search_discretization_[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+     num_negative_increments = (initial_guess - joint_min_vector_[free_params_[0]]) / [01;35m[Ksearch_discretization_[m[K;
+                                                                                      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:50:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:592:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   MOVEIT_DEPRECATED double [01;36m[Ksearch_discretization_[m[K;
+                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:986:86:[m[K [01;35m[Kwarning: [m[K‘[01m[Kkinematics::KinematicsBase::search_discretization_[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+     num_negative_increments = (initial_guess - joint_min_vector_[free_params_[0]]) / [01;35m[Ksearch_discretization_[m[K;
+                                                                                      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:50:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:592:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   MOVEIT_DEPRECATED double [01;36m[Ksearch_discretization_[m[K;
+                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:1078:32:[m[K [01;35m[Kwarning: [m[K‘[01m[Kkinematics::KinematicsBase::search_discretization_[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+     vfree[0] = initial_guess + [01;35m[Ksearch_discretization_[m[K * counter;
+                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:50:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:592:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   MOVEIT_DEPRECATED double [01;36m[Ksearch_discretization_[m[K;
+                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:1078:32:[m[K [01;35m[Kwarning: [m[K‘[01m[Kkinematics::KinematicsBase::search_discretization_[m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+     vfree[0] = initial_guess + [01;35m[Ksearch_discretization_[m[K * counter;
+                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/acis/sim2real/simulations/kinova/src/kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s6s300_ikfast/src/j2s6s300_arm_ikfast_moveit_plugin.cpp:50:0[m[K:
+[01m[K/opt/ros/melodic/include/moveit/kinematics_base/kinematics_base.h:592:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   MOVEIT_DEPRECATED double [01;36m[Ksearch_discretization_[m[K;
+                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K

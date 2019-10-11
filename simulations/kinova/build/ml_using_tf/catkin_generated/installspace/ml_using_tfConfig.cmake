@@ -68,7 +68,7 @@ set(ml_using_tf_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(ml_using_tf_SOURCE_PREFIX /home/acis/sim2real/simulations/kinova/src/ml_using_tf)
-  set(ml_using_tf_DEVEL_PREFIX /home/acis/sim2real/simulations/kinova/devel)
+  set(ml_using_tf_DEVEL_PREFIX /home/acis/sim2real/simulations/kinova/devel/.private/ml_using_tf)
   set(ml_using_tf_INSTALL_PREFIX "")
   set(ml_using_tf_PREFIX ${ml_using_tf_DEVEL_PREFIX})
 else()

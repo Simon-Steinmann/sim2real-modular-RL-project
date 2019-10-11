@@ -14,7 +14,7 @@ path = 'Data_and_Graphs/results_' + date_str + '/'
 config = Config()
 config.seed = 1
 config.environment = j2n6s300_Environment(proxyID='Env1')
-config.num_episodes_to_run = 3000
+config.num_episodes_to_run = 100
 config.file_to_save_config = path + "config.json"
 config.file_to_save_data_results = path + "jaco_DDPG-HER.pkl"
 config.file_to_save_results_graph = path + "jaco_DDPG-HER.png"
@@ -29,7 +29,7 @@ config.overwrite_existing_results_file = False
 config.randomise_random_seed = True
 config.load_model = False
 config.load_model_path = "Models/model.pt"
-config.save_model = False
+config.save_model = True
 config.save_model_path = "Models/{}model.pt".format(now.strftime("%Y-%m-%d_%H-%M-%S_"))
 
 config.hyperparameters = {

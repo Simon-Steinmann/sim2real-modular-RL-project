@@ -58,8 +58,8 @@ add_executable(state_publisher src/joint_state_listener.cpp)
 target_link_libraries(state_publisher ${PROJECT_NAME}_solver ${orocos_kdl_LIBRARIES})
 
 
-add_executable(listener src/listener.cpp)
-target_link_libraries(listener ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES} pthread)
+#add_executable(listener src/listener.cpp)
+#target_link_libraries(listener ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES} pthread)
 # Tests
 
 if (CATKIN_ENABLE_TESTING)

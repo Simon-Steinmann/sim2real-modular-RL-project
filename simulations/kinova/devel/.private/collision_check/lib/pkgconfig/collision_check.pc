@@ -1,0 +1,8 @@
+prefix=/home/acis/sim2real/simulations/kinova/devel/.private/collision_check
+
+Name: collision_check
+Description: Description of collision_check
+Version: 0.0.0
+Cflags: -I/home/acis/sim2real/simulations/kinova/devel/.private/collision_check/include
+Libs: -L/home/acis/sim2real/simulations/kinova/devel/.private/collision_check/lib 
+Requires: moveit_core

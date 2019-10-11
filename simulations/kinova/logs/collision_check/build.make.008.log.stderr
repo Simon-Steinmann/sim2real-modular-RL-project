@@ -1,0 +1,7 @@
+[01m[K/home/acis/sim2real/simulations/kinova/src/collision_check/src/planning_scene_tutorial.cpp:[m[K In function ‘[01m[Kbool service_callback(collision_check::CheckJointStateCollision::Request&, collision_check::CheckJointStateCollision::Response&)[m[K’:
+[01m[K/home/acis/sim2real/simulations/kinova/src/collision_check/src/planning_scene_tutorial.cpp:80:10:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kcollision_check::CheckJointStateCollision::Response {aka collision_check::CheckJointStateCollisionResponse_<std::allocator<void> >}[m[K’ to ‘[01m[Kbool[m[K’ in return
+   return [01;31m[Kres[m[K;
+          [01;31m[K^~~[m[K
+make[2]: *** [CMakeFiles/planning_scene_tutorial.dir/src/planning_scene_tutorial.cpp.o] Error 1
+make[1]: *** [CMakeFiles/planning_scene_tutorial.dir/all] Error 2
+make: *** [all] Error 2

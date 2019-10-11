@@ -1,7 +1,1 @@
-
-"use strict";
-
-module.exports = {
-  msg: require('./msg/_index.js'),
-  srv: require('./srv/_index.js')
-};
+/home/acis/sim2real/simulations/kinova/devel/.private/kinova_msgs/share/gennodejs/ros/kinova_msgs/_index.js

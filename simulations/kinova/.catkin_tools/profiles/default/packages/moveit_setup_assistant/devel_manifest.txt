@@ -1,0 +1,11 @@
+moveit/moveit_setup_assistant
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant/lib/libmoveit_setup_assistant_widgets.so.1.0.1 /home/acis/sim2real/simulations/kinova/devel/lib/libmoveit_setup_assistant_widgets.so.1.0.1
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant/lib/libmoveit_setup_assistant_tools.so.1.0.1 /home/acis/sim2real/simulations/kinova/devel/lib/libmoveit_setup_assistant_tools.so.1.0.1
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant/lib/libmoveit_setup_assistant_tools.so /home/acis/sim2real/simulations/kinova/devel/lib/libmoveit_setup_assistant_tools.so
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant/lib/libmoveit_setup_assistant_widgets.so /home/acis/sim2real/simulations/kinova/devel/lib/libmoveit_setup_assistant_widgets.so
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant/lib/moveit_setup_assistant/collisions_updater /home/acis/sim2real/simulations/kinova/devel/lib/moveit_setup_assistant/collisions_updater
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant/lib/moveit_setup_assistant/moveit_setup_assistant /home/acis/sim2real/simulations/kinova/devel/lib/moveit_setup_assistant/moveit_setup_assistant
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant/lib/pkgconfig/moveit_setup_assistant.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/moveit_setup_assistant.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig-version.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_setup_assistant/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig.cmake

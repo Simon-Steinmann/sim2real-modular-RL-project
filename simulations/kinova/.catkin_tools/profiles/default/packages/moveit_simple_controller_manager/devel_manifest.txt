@@ -1,0 +1,7 @@
+moveit/moveit_plugins/moveit_simple_controller_manager
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_simple_controller_manager/cmake.lock /home/acis/sim2real/simulations/kinova/devel/./cmake.lock
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_simple_controller_manager/lib/libmoveit_simple_controller_manager.so.1.0.1 /home/acis/sim2real/simulations/kinova/devel/lib/libmoveit_simple_controller_manager.so.1.0.1
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_simple_controller_manager/lib/libmoveit_simple_controller_manager.so /home/acis/sim2real/simulations/kinova/devel/lib/libmoveit_simple_controller_manager.so
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_simple_controller_manager/lib/pkgconfig/moveit_simple_controller_manager.pc /home/acis/sim2real/simulations/kinova/devel/lib/pkgconfig/moveit_simple_controller_manager.pc
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_simple_controller_manager/share/moveit_simple_controller_manager/cmake/moveit_simple_controller_managerConfig.cmake /home/acis/sim2real/simulations/kinova/devel/share/moveit_simple_controller_manager/cmake/moveit_simple_controller_managerConfig.cmake
+/home/acis/sim2real/simulations/kinova/devel/.private/moveit_simple_controller_manager/share/moveit_simple_controller_manager/cmake/moveit_simple_controller_managerConfig-version.cmake /home/acis/sim2real/simulations/kinova/devel/share/moveit_simple_controller_manager/cmake/moveit_simple_controller_managerConfig-version.cmake
