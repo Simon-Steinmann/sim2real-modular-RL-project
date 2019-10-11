@@ -20,7 +20,9 @@ class Config(object):
         self.randomise_random_seed = True
         self.show_solution_score = False
         self.debug_mode = False
-        self.load_model_path = None
+        self.load_model_path = None               # All other models (DQN)
+        self.actor_model_path = None              #Actor-Critic methods only (DDPG)
+        self.critic_model_path = None             #Actor-Critic methods only (DDPG)
         self.save_model = False
         self.save_model_path = None
         

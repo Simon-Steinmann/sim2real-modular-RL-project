@@ -27,6 +27,9 @@ class DDPG(Base_Agent):
         self.actor_optimizer = optim.Adam(self.actor_local.parameters(),
                                           lr=self.hyperparameters["Actor"]["learning_rate"], eps=1e-4)
         self.exploration_strategy = OU_Noise_Exploration(self.config)
+        
+        self.play = config.load_model
+        if self.play: self.locally_load_policy()
 
     def step(self):
         """Runs a step in the game"""
@@ -34,7 +37,7 @@ class DDPG(Base_Agent):
             # print("State ", self.state.shape)
             self.action = self.pick_action()
             self.conduct_action(self.action)
-            if self.time_for_critic_and_actor_to_learn():
+            if self.time_for_critic_and_actor_to_learn() and not self.play:
                 for _ in range(self.hyperparameters["learning_updates_per_learning_session"]):
                     states, actions, rewards, next_states, dones = self.sample_experiences()
                     self.critic_learn(states, actions, rewards, next_states, dones)
@@ -99,6 +102,23 @@ class DDPG(Base_Agent):
         actor and critic"""
         return self.enough_experiences_to_learn_from() and self.global_step_number % self.hyperparameters["update_every_n_steps"] == 0
 
+    def locally_save_policy(self):
+        """Saves the policy"""
+        torch.save(self.actor_local.state_dict(), self.config.actor_model_path) 
+        torch.save(self.critic_local.state_dict(), self.config.critic_model_path) 
+
+    def locally_load_policy(self):
+        """Loads the policy"""
+        print("Loading Model")
+        self.actor_local.load_state_dict(torch.load(self.config.actor_model_path))
+        self.actor_local.eval()
+        self.actor_target.load_state_dict(torch.load(self.config.actor_model_path))
+        self.actor_target.eval()
+        self.critic_local.load_state_dict(torch.load(self.config.critic_model_path))
+        self.critic_local.eval()
+        self.critic_target.load_state_dict(torch.load(self.config.critic_model_path))
+        self.critic_target.eval()
+         
     def actor_learn(self, states):
         """Runs a learning iteration for the actor"""
         if self.done: #we only update the learning rate at end of each episode

@@ -43,7 +43,7 @@ class Base_Agent(object):
         self.device = "cuda:0" if config.use_GPU else "cpu"
         self.visualise_results_boolean = config.visualise_individual_results
         self.global_step_number = 0
-        self.turn_off_exploration = False
+        self.turn_off_exploration = config.load_model
         gym.logger.set_level(40)  # stops it from printing an unnecessary warning
         self.log_game_info()
 
@@ -185,7 +185,6 @@ class Base_Agent(object):
     def run_n_episodes(self, num_episodes=None, show_whether_achieved_goal=True, save_and_print_results=True):
         """Runs game to completion n times and then summarises results and saves model (if asked to)"""
         DynPlot = DynamicGraphPlot(self.agent_name)
-        if self.config.load_model: self.locally_load_policy()
         if num_episodes is None: num_episodes = self.config.num_episodes_to_run
         start = time.time()
         while self.episode_number < num_episodes:
