@@ -21,10 +21,10 @@ class j2n6s300_Environment(gym.Env):
         
         self.seed()
         self.reward_threshold = 320
-        self.trials = 10
+        self.trials = 20
         self.max_episode_steps = 360
         self.id = "Jaco Proxy Env Her"
-        self.reward_for_achieving_goal = 0
+        self.reward_for_achieving_goal = 360
         self.step_reward_for_not_achieving_goal = -1
 
         self.deterministic = deterministic

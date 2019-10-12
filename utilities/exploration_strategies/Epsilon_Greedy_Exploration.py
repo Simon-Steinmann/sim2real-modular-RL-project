@@ -44,6 +44,7 @@ class Epsilon_Greedy_Exploration(Base_Exploration_Strategy):
 
         if self.exploration_cycle_episodes_length is None:
             epsilon = epsilon / (1.0 + (episode_number / epsilon_decay_denominator))
+#            epsilon = 1.0 / (1.0 + (episode_number / epsilon_decay_denominator))
         else:
             epsilon = self.calculate_epsilon_with_cyclical_strategy(episode_number)
         return epsilon

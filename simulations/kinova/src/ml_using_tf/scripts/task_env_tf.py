@@ -45,7 +45,7 @@ class j2n6s300TestEnv(gym.Env):
         self.init_point = PointStamped()
         self.init_point.header.frame_id = "world"
         
-        
+        self.complexity_factor = 0
         
         self.action = 0
         self.init_positions = [0.0, 2.9, 1.3, -2.07, 1.4, 0.0, 0, 0, 0, 0, 0, 0.0] 
@@ -79,6 +79,7 @@ class j2n6s300TestEnv(gym.Env):
 
     def step(self, action):
         #print(action)
+        
         joints = self.joint_state
         positions = joints.position
         action_pos = list(self.init_positions)        
@@ -115,6 +116,18 @@ class j2n6s300TestEnv(gym.Env):
         init_pos = self.kinematics.Target2JointPos(rand_point)
         self.joint_state_pub(init_pos)
         
+        
+        if self.n_episode < 60: 
+            self.complexity_factor = 1
+            self.outer_radius = 0.4
+        elif self.n_episode < 90: 
+            self.complexity_factor = 2
+            self.outer_radius = 0.6
+        else: 
+            self.complexity_factor = 3
+            self.outer_radius = 0.7
+        
+        
         self.target_point = self.kinematics.RandomPointInSphere(self.inner_radius, self.outer_radius)
         
         self.target_point[2] = max(0.1,self.target_point[2]) #make z value positive
@@ -126,7 +139,7 @@ class j2n6s300TestEnv(gym.Env):
         self.point2_pub.publish(self.init_point)
          
         
-        
+    
         print(self.n_episode, self.n_step, self.min_distance)
         self.n_step = 0
         self.n_episode += 1
@@ -187,7 +200,7 @@ class j2n6s300TestEnv(gym.Env):
         return reward
         
     def is_done(self):
-        if self.n_step == 360 or self.reward  == 1: #
+        if self.n_step == 360:# or self.reward  == 1: 
             
             return True
             

@@ -35,19 +35,20 @@ config.randomise_random_seed = True
 config.load_model = False
 config.load_model_path = "Models/.pt"
 config.save_model = False
-config.save_model_path = "Models/{}model.pt".format(now.strftime("%Y-%m-%d_%H-%M-%S_"))
+#config.save_model_path = "Models/{}model.pt".format(now.strftime("%Y-%m-%d_%H-%M-%S_"))
+config.save_model_path = "Models/DQN_HER_demo_curr.pt"
 
 
 config.hyperparameters = {
     "DQN_Agents": {
         "learning_rate": 0.001,
-        "batch_size": 512,
+        "batch_size": 128,
         "buffer_size": 1000000,
         "epsilon_decay_rate_denominator": eps_decay_rate_denom,
         "discount_rate": 0.9,
         "incremental_td_error": 1e-8,
         "update_every_n_steps": 10,
-        "linear_hidden_units": [128, 256, 128],
+        "linear_hidden_units": [64, 128, 64],
         "final_layer_activation": None,
         "y_range": (-1, 14),
         "batch_norm": False,
