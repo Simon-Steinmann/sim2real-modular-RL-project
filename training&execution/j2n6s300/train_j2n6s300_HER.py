@@ -23,8 +23,8 @@ config.use_GPU = True
 config.overwrite_existing_results_file = False
 config.randomise_random_seed = True
 config.load_model = False
-config.load_model_path = "Models/model.pt"
-config.save_model = True
+config.load_model_path = "Models/2019-10-11_14-10-03_model.pt"
+config.save_model = False
 config.save_model_path = "Models/{}model.pt".format(now.strftime("%Y-%m-%d_%H-%M-%S_"))
 
 

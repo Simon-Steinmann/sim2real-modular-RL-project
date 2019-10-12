@@ -14,7 +14,7 @@ path = 'Data_and_Graphs/results_' + date_str + '/'
 config = Config()
 config.seed = 1
 config.environment = j2n6s300_Environment(proxyID='Env1')
-config.num_episodes_to_run = 100
+config.num_episodes_to_run = 1
 config.file_to_save_config = path + "config.json"
 config.file_to_save_data_results = path + "jaco_DDPG-HER.pkl"
 config.file_to_save_results_graph = path + "jaco_DDPG-HER.png"
@@ -23,7 +23,7 @@ config.visualise_results_while_training = True
 config.visualise_individual_results = True
 config.visualise_overall_agent_results = True
 config.standard_deviation_results = 1.0
-config.runs_per_agent = 5
+config.runs_per_agent = 1
 config.use_GPU = True
 config.overwrite_existing_results_file = False
 config.randomise_random_seed = True
