@@ -119,6 +119,8 @@ class j2n6s300TestEnv(gym.Env):
         
         self.target_point[2] = max(0.1,self.target_point[2]) #make z value positive
         self.target_point[0] = -abs(self.target_point[0]) #make x value negative, so it's not too close to init pos
+        #self.target_point = [0.5, 0.5, 0.5]
+        
         self.goal_point.point = Point(self.target_point[0],self.target_point[1],self.target_point[2])
         self.point1_pub.publish(self.goal_point)
         self.point2_pub.publish(self.init_point)
@@ -185,7 +187,7 @@ class j2n6s300TestEnv(gym.Env):
         return reward
         
     def is_done(self):
-        if self.n_step == 360 :#or self.reward  == 1: #
+        if self.n_step == 360 or self.reward  == 1: #
             
             return True
             

@@ -18,13 +18,13 @@ class j2n6s300_Environment(gym.Env):
             achieved_goal=spaces.Box(-np.full((3),2) , np.full((3),2), dtype='float32'),
             observation=spaces.Box(-np.full((56),2) , np.full((56),2), dtype='float32'),
         ))
-        
+
         self.seed()
         self.reward_threshold = 320
         self.trials = 10
         self.max_episode_steps = 360
         self.id = "Jaco Proxy Env Her"
-        self.reward_for_achieving_goal = 0
+        self.reward_for_achieving_goal = 360
         self.step_reward_for_not_achieving_goal = -1
 
         self.deterministic = deterministic
@@ -36,9 +36,7 @@ class j2n6s300_Environment(gym.Env):
     def reset(self):
         obs = np.asarray(self.env.reset())
         target_point = self.env.get_variable('target_point')
-        
         self.des_goal = np.array(target_point)
-        #print(target_point)
         return {"observation": obs, "desired_goal": self.des_goal,
                 "achieved_goal": obs[48:51]}
 
